@@ -1,0 +1,56 @@
+*{
+    background-color:whitesmoke;
+    
+} 
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px; 
+    color: black;
+    background-color: whitesmoke; 
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 30px 20px;
+ 
+}
+ 
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    border-bottom: 2px solid;
+    padding-bottom: 12px;
+    margin-bottom: 10px;
+}
+h2{
+    
+    font-size: 30px;
+    color: rgb(3, 97, 192);
+} 
+fieldset{
+    border-color: bisque;
+    border : 2px solid rgb(163, 201, 242);
+    border-radius: 8px;
+    padding: 20 px;
+    margin-bottom: 20px;
+}
+legend{
+    background-color: rgb(163, 201, 242);
+    border: 1px solid rgb(163, 201, 242);
+    border-radius: 9px;
+    padding: 5px 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+} 
+h3{
+    font-size: 20px;
+    color:rgb(5, 11, 18);
+} 
+#mypic{
+    display: block;
+    margin: 0 auto;
+    heigth: 300px;
+    width: 200px;
+    border-radius: 2%;
+    object-fit: cover;
+}
