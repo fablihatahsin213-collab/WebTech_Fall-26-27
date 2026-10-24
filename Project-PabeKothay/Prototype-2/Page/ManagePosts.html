@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Manage Students | PabeKothay</title>
+        <link rel="stylesheet" href="../Design/style1.css">
+        </head>
+    <body class="manage-posts">
+        <div class="header">
+            <image src="pabekothay logo 1.jpeg" id="logo"></image>
+            <h2>PabeKothay </h2>
+            <p class="tagline">Find what you need, share what you have</p>
+            <p>Admin Panel | Administration</p>
+            </div>
+            <div class="sidebar">
+                <a href="Dashboard.html">Dashboard</a>
+                <a href="ManageStudents.html">Students</a>
+                <a href="ManagePosts.html">Posts</a>
+                <a href="ManageRequests.html">Requests</a>
+                <a href="Settings.html">Settings</a>
+            </div>
+            <div class="main">
+                <h1>Manage Posts</h1>
+                <p>Review marketplace listings and availability</p>
+                <form>
+                    <input type="text" name="search" placeholder="Search items...">
+                    <select name="category">
+                        <option value="">All categories</option>
+                        <option value="Books">Books</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Accessories">Accessories</option>
+                        </select>
+
+                        <select name="status">
+                            <option value="">All status</option>
+                            <option value="Active">Active</option>
+                            <option value="Ünder Review">Under Review</option>
+                            <option value="Hidden">Hidden</option>
+                            <option value="Restore">Restore</option>
+
+                        </select>
+
+                        <input type="submit" value="Search">
+                        </form>
+                        <table>
+                            <tr>
+                                <th>Item</th>
+                                <th>Owner</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+
+                            <tr>
+                                <td>Engineering Book</td>
+                                <td>Mahim Khan</td>
+                                <td>Books</td>
+                                <td>Active</td>
+                                <td><a href="PostDetails.html">View</a> / <a href="HidePost.html">Hide</a>
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td>Arduino lab kit </td>
+                                <td>Rikti Ahmed</td>
+                                <td>Lab kits</td>
+                                <td>Under Review</td>
+                                <td><a href="PostDetails.html">Review</a>
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td>Chemistry Lab Apron</td>
+                                <td>Fabliha Tahsin</td>
+                                <td>Accessories</td>
+                                <td>Hidden</td>
+                                <td><a href="RestrorePost.html">Restore</a></td>
+                            </tr>
+                            </table>
+                            <p>Select a post to review its details or manage its visibility.</p>
+
+
+            </div>
+            </body>
+            </html> 

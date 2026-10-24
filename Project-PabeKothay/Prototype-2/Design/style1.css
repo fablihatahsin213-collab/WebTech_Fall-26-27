@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #F0F5F4;
+    color: #294A43;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 13px;
+}
+
+.header {
+    height: 65px;
+    padding: 10px 20px;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #D5E5DF;
+}
+
+#logo {
+    float: left;
+    width: 35px;
+    height: 35px;
+    margin: 3px 10px 0 0;
+    border-radius: 50%;
+}
+
+.header h2 {
+    float: left;
+    margin: 0;
+    color: #193F36;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.header .tagline {
+    float: left;
+    clear: left;
+    margin: -2px 0 0 38px;
+    color: #666666;
+    font-size: 10px;
+}
+
+.header p:last-child {
+    float: right;
+    margin: 12px 10px 0 0;
+    color: #71817D;
+    font-size: 13px;
+}
+
+.sidebar {
+    float: left;
+    width: 18%;
+    min-height: 550px;
+    padding: 12px;
+    background-color: #F6FAF8;
+    border: 1px solid #D5E5DF;
+}
+
+.sidebar a {
+    display: block;
+    margin-bottom: 5px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background-color: #E8F3EF;
+    color: #0F6E56;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #DDECE6;
+}
+
+body.manage-posts .sidebar a[href="ManagePosts.html"],
+body.manage-students .sidebar a[href="ManageStudents.html"] {
+    background-color: #0F6E56;
+    border-left: 4px solid #D85A30;
+    color: white;
+}
+
+.main {
+    min-height: 550px;
+    margin-left: 18%;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #DDE7E3;
+}
+
+.main h1 {
+    margin: 0 0 5px;
+    color: #0F6E56;
+    font-size: 28px;
+}
+
+.main p {
+    color: #666666;
+}
+
+form {
+    margin: 20px 0;
+    padding: 12px;
+    background-color: white;
+    border: 1px solid #DDE7E3;
+}
+
+input[type="text"] {
+    width: 35%;
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    border: 1px solid #DDE7E3;
+}
+
+.student-search input[type="text"] {
+    width: 83%;
+}
+
+select {
+    width: 20%;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #DDE7E3;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+}
+
+input[type="submit"] {
+    width: 15%;
+    padding: 10px;
+    background-color: #0F6E56;
+    border: none;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #D85A30;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border: 1px solid #DDE7E3;
+}
+
+th {
+    padding: 12px;
+    background-color: #E8F3EF;
+    border-bottom: 1px solid #DDE7E3;
+    color: black;
+    text-align: left;
+}
+
+td {
+    padding: 14px 12px;
+    background-color: #F4F7F6;
+    border-bottom: 1px solid #DDE7E3;
+    text-align: left;
+}
+
+td a {
+    color: #0F6E56;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
