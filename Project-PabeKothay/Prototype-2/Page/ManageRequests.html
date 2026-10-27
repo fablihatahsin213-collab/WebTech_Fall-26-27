@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Manage Requests | PabeKothay</title>
+        <link rel="stylesheet" href="../Design/style1.css">
+        </head>
+    <body class="manage-requests">
+        <div class="header">
+            <image src="pabekothay logo 1.jpeg" id="logo"></image>
+            <h2>PabeKothay </h2>
+            <p class="tagline">Find what you need, share what you have</p>
+            <p>Admin Panel | Administration</p>
+            </div>
+            <div class="sidebar">
+                <a href="Dashboard.html">Dashboard</a>
+                <a href="ManageStudents.html">Students</a>
+                <a href="ManagePosts.html">Posts</a>
+                <a href="ManageRequests.html">Requests</a>
+                <a href="Settings.html">Settings</a>
+            </div> 
+            <div class="main">
+        <h1>Manage Requests</h1>
+        <p>Review buy and exchange requests</p>
+
+        <form class="request-filter" method="get">
+            <select name="type" aria-label="Filter by request type">
+                <option value="">All Requests</option>
+                <option value="buy">Buy Requests</option>
+                <option value="exchange">Exchange Requests</option>
+            </select>
+
+            <select name="status" aria-label="Filter by request status">
+                <option value="">All statuses</option>
+                <option value="pending">Pending</option>
+                <option value="approved">Approved</option>
+                <option value="completed">Completed</option>
+                <option value="rejected">Rejected</option>
+            </select>
+
+            <input type="submit" value="Filter">
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Requester</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Engineering Book</td>
+                    <td>Mahabubur Rahman</td>
+                    <td>Buy</td>
+                    <td>Pending</td>
+                    <td><a href="RequestDetails.html">Review</a></td>
+                </tr>
+                <tr>
+                    <td>Arduino Lab Kit</td>
+                    <td>Mahim Khan</td>
+                    <td>Exchange</td>
+                    <td>Approved</td>
+                    <td><a href="RequestDetails.html">Update</a></td>
+                </tr>
+                <tr>
+                    <td>Calculator</td>
+                    <td>Tushar Ahmed</td>
+                    <td>Buy</td>
+                    <td>Completed</td>
+                    <td><a href="RequestDetails.html">View</a></td>
+                </tr>
+                <tr>
+                    <td>Backpack</td>
+                    <td>Rikti Ahmed</td>
+                    <td>Exchange</td>
+                    <td>Rejected</td>
+                    <td><a href="RequestDetails.html">View reason</a></td>
+                </tr>
+                <tr>
+                    <td>Lab Coat</td>
+                    <td>Fabliha Tahsin</td>
+                    <td>Buy</td>
+                    <td>Pending</td>
+                    <td><a href="RequestDetails.html">Review</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Open a request to review its details and update its status.</p>
+    </div>
+    <footer class="small-footer">© 2026 PabeKothay. All rights reserved.</footer>
+</body>
+</html>
