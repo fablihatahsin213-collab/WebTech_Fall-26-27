@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Admin Dashboard | PabeKothay</title>
+        <link rel="stylesheet" href="../Design/style1.css">
+    </head>
+    <body class="admin-dashboard">
+        <div class="header">
+            <img src="pabekothay logo 1.jpeg" id="logo" alt="PabeKothay logo">
+            <h2>PabeKothay</h2>
+            <p>Admin Portal</p>
+        </div>
+
+        <div class="sidebar">
+            <a class="dashboard-active" href="AdminDashboard.html">Dashboard</a>
+            <a href="AdminManageStudents.html">Students</a>
+            <a href="AdminManagePosts.html">Posts</a>
+            <a href="AdminManageRequests.html">Requests</a>
+            <a href="Settings.html">Settings</a>
+            <a class="logout-link" href="AdminLogin.html">Log out</a>
+        </div>
+
+        <main class="dashboard-main">
+            <h1>Dashboard</h1>
+            <p class="dashboard-description">Overview of marketplace and platform activity.</p>
+
+            <div class="dashboard-summary">
+                <div class="summary-card">
+                    <p>Total Students</p>
+                    <h2>1,248</h2>
+                    <p>Registered accounts</p>
+                </div>
+                <div class="summary-card">
+                    <p>Active Posts</p>
+                    <h2>386</h2>
+                    <p>Visible listings</p>
+                </div>
+                <div class="summary-card">
+                    <p>Pending Requests</p>
+                    <h2>42</h2>
+                    <p>Need review</p>
+                </div>
+                <div class="summary-card">
+                    <p>Staff Pending</p>
+                    <h2>6</h2>
+                    <p>Awaiting approval</p>
+                </div>
+            </div>
+
+            <table class="activity-table">
+                <thead>
+                    <tr>
+                        <th>Activity</th>
+                        <th>Details</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>New registration</td>
+                        <td>Student account</td>
+                        <td>Pending</td>
+                        <td>Today</td>
+                    </tr>
+                    <tr>
+                        <td>New listing</td>
+                        <td>Arduino Lab Kit</td>
+                        <td>Under review</td>
+                        <td>Today</td>
+                    </tr>
+                    <tr>
+                        <td>Buy request</td>
+                        <td>Engineering Book</td>
+                        <td>Pending</td>
+                        <td>Today</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <footer class="small-footer">© 2026 PabeKothay. All rights reserved.</footer>
+    </body>
+</html>

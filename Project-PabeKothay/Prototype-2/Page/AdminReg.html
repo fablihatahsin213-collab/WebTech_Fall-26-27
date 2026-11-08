@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Admin Registration | PabeKothay</title>
+        <link rel="stylesheet" href="../Design/style1.css">
+    </head>
+    <body class="admin-registration">
+        <header class="header">
+            <img src="pabekothay logo 1.jpeg" id="logo" alt="PabeKothay logo">
+            <h2>PabeKothay </h2>
+            <p class="tagline">Find what you need, share what you have</p>
+            <p>Admin Portal</p>
+        </header>
+
+        <main class="registration-main">
+            <div class="registration-intro">
+                <h1>Administrator Registration</h1>
+                <p>Create your administrator account. Admin approval is required before you can sign in.</p>
+            </div>
+
+            <section class="registration-card" aria-labelledby="registration-form-title">
+                <h2 id="registration-form-title">Admin Access Request</h2>
+                <form action="#" method="post">
+                    <div class="registration-fields">
+                        <div class="registration-field field-left">
+                            <label for="full-name">Full name</label>
+                            <input id="full-name" name="fullName" type="text" autocomplete="name" required>
+                        </div>
+
+                        <div class="registration-field field-right">
+                            <label for="date-of-birth">Date of birth</label>
+                            <input id="date-of-birth" name="dateOfBirth" type="date" autocomplete="bday" required>
+                        </div>
+
+                        <div class="registration-field field-left">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" required>
+                                <option value="" selected disabled>Select gender</option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                            </select>
+                        </div>
+
+                        <div class="registration-field field-right">
+                            <label for="work-email">Official work email</label>
+                            <input id="work-email" name="email" type="email" autocomplete="email" required>
+                        </div>
+
+                        <div class="registration-field field-left">
+                            <label for="phone-number">Phone number</label>
+                            <input id="phone-number" name="phone" type="tel" autocomplete="tel" required>
+                        </div>
+
+                        <div class="registration-field field-right">
+                            <label for="department">Admin department</label>
+                            <select id="department" name="department" required>
+                                <option value="" selected disabled>Select department</option>
+                                <option value="student-accounts">Student Accounts</option>
+                                <option value="marketplace">Marketplace</option>
+                                <option value="support">Customer Support</option>
+                                <option value="general">General Administration</option>
+                            </select>
+                        </div>
+
+                        <div class="registration-field field-left">
+                            <label for="password">Create password</label>
+                            <input id="password" name="password" type="password" autocomplete="new-password" required>
+                        </div>
+
+                        <div class="registration-field field-right">
+                            <label for="confirm-password">Confirm password</label>
+                            <input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password" required>
+                        </div>
+                    </div>
+
+                    <div class="registration-actions">
+                        <button type="submit">Create Account</button>
+                        <p>Already have an account? <a href="AdminLogin.html">Log in</a></p>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer class="small-footer">© 2026 PabeKothay. All rights reserved.</footer>
+    </body>
+</html>

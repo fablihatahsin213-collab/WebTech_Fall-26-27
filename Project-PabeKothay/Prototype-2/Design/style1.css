@@ -52,6 +52,7 @@ body {
 }
 
 .sidebar {
+    position: relative;
     float: left;
     width: 18%;
     min-height: 550px;
@@ -74,9 +75,19 @@ body {
     background-color: #DDECE6;
 }
 
+.sidebar .logout-link {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+}
+
 body.manage-posts .sidebar a[href="ManagePosts.html"],
 body.manage-students .sidebar a[href="ManageStudents.html"],
-body.manage-requests .sidebar a[href="ManageRequests.html"] {
+body.manage-requests .sidebar a[href="ManageRequests.html"],
+body.manage-students .sidebar a[href="AdminManageStudents.html"],
+body.manage-requests .sidebar a[href="AdminManageRequests.html"],
+body.admin-manage-posts .sidebar a[href="AdminManagePosts.html"] {
     background-color: #0F6E56;
     border-left: 4px solid #D85A30;
     color: white;
@@ -179,4 +190,360 @@ td a:hover {
     clear: both;
     padding: 12px;
     text-align: center;
+}
+
+body.admin-registration {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body.admin-registration .header {
+    position: relative;
+}
+
+body.admin-registration .header p:last-child {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    margin: 0;
+    line-height: 35px;
+}
+
+.registration-main {
+    width: 680px;
+    margin: 0 auto;
+    padding: 54px 0 32px;
+}
+
+.registration-intro {
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.registration-intro h1 {
+    margin: 0 0 6px;
+    color: #0F6E56;
+    font-size: 26px;
+}
+
+.registration-intro p {
+    margin: 0;
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.registration-card {
+    padding: 20px 30px;
+    background-color: white;
+    border: 1px solid #DDE7E3;
+    border-radius: 10px;
+}
+
+.registration-card h2 {
+    margin: 0 0 18px;
+    color: #294A43;
+    font-size: 20px;
+}
+
+.registration-card form {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.registration-fields {
+    overflow: hidden;
+}
+
+.registration-field label {
+    display: block;
+    margin-bottom: 5px;
+    color: #52635F;
+    font-size: 13px;
+}
+
+.registration-field input,
+.registration-field select {
+    width: 100%;
+    min-height: 38px;
+    padding: 8px 10px;
+    color: #294A43;
+    background-color: #F7FAF9;
+    border: 1px solid #D5E1DD;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.registration-field {
+    width: 48%;
+    margin-bottom: 16px;
+    float: left;
+}
+
+.registration-field.field-left {
+    clear: left;
+}
+
+.registration-field.field-right {
+    margin-left: 4%;
+}
+
+.registration-actions {
+    clear: both;
+    margin-top: 24px;
+    overflow: hidden;
+}
+
+.registration-actions button {
+    min-height: 42px;
+    width: 65%;
+    padding: 10px 16px;
+    color: white;
+    background-color: #0F6E56;
+    border: 0;
+    border-radius: 4px;
+    font: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    float: left;
+}
+
+.registration-actions button:hover {
+    background-color: #D85A30;
+}
+
+.registration-actions p {
+    margin: 14px 0 0 2%;
+    color: #52635F;
+    font-size: 13px;
+    white-space: nowrap;
+    float: left;
+}
+
+.registration-actions a {
+    color: #0F6E56;
+    text-decoration: none;
+}
+
+.registration-actions a:hover {
+    text-decoration: underline;
+}
+
+.admin-registration .small-footer {
+    margin-top: 20px;
+    color: #71817D;
+}
+
+body.admin-login {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body.admin-login .header {
+    position: relative;
+}
+
+body.admin-login .header p:last-child {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    margin: 0;
+    line-height: 35px;
+}
+
+.login-main {
+    width: 665px;
+    margin: 0 auto;
+    padding: 160px 0 32px;
+}
+
+.login-intro {
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.login-intro h1 {
+    margin: 0 0 6px;
+    color: #0F6E56;
+    font-size: 26px;
+}
+
+.login-intro p {
+    margin: 0;
+    color: #666666;
+    font-size: 14px;
+}
+
+.login-card {
+    padding: 20px 30px;
+    background-color: white;
+    border: 1px solid #DDE7E3;
+    border-radius: 10px;
+}
+
+.login-card h2 {
+    margin: 0 0 18px;
+    color: #294A43;
+    font-size: 20px;
+}
+
+.login-card form {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.login-field {
+    margin-bottom: 20px;
+}
+
+.login-field label {
+    display: block;
+    margin-bottom: 5px;
+    color: #52635F;
+    font-size: 13px;
+}
+
+.login-field input {
+    width: 100%;
+    height: 38px;
+    padding: 8px 10px;
+    background-color: #F7FAF9;
+    border: 1px solid #D5E1DD;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.login-actions {
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.login-actions button {
+    width: 70%;
+    height: 42px;
+    float: left;
+    color: white;
+    background-color: #0F6E56;
+    border: 0;
+    border-radius: 4px;
+    font: inherit;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.login-actions button:hover {
+    background-color: #D85A30;
+}
+
+.login-actions p {
+    margin: 12px 0 0 2%;
+    float: left;
+    color: #52635F;
+    font-size: 13px;
+}
+
+.login-actions a {
+    color: #0F6E56;
+    text-decoration: none;
+}
+
+.login-actions a:hover {
+    text-decoration: underline;
+}
+
+.admin-login .small-footer {
+    margin-top: 20px;
+    color: #71817D;
+}
+
+body.admin-dashboard {
+    min-height: 100vh;
+    padding: 8px 18px;
+}
+
+.admin-dashboard .header {
+    height: 58px;
+    padding: 10px 12px;
+}
+
+.admin-dashboard .header p:last-child {
+    margin-top: 10px;
+}
+
+.admin-dashboard .sidebar {
+    width: 18%;
+    min-height: 538px;
+}
+
+.admin-dashboard .dashboard-active {
+    background-color: #0F6E56;
+    border-left: 4px solid #D85A30;
+    color: white;
+}
+
+.dashboard-main {
+    min-height: 538px;
+    margin-left: 18%;
+    padding: 25px 28px;
+    background-color: #F0F5F4;
+}
+
+.dashboard-main h1 {
+    margin: 0 0 4px;
+    color: #0F6E56;
+    font-size: 28px;
+}
+
+.dashboard-description {
+    margin: 0 0 18px;
+    color: #666666;
+}
+
+.dashboard-summary {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.summary-card {
+    width: 23.5%;
+    height: 84px;
+    margin-right: 2%;
+    padding: 10px;
+    float: left;
+    background-color: white;
+    border: 1px solid #D5E1DD;
+    border-radius: 6px;
+}
+
+.summary-card:last-child {
+    margin-right: 0;
+}
+
+.summary-card p {
+    margin: 0;
+    color: #666666;
+}
+
+.summary-card h2 {
+    margin: 5px 0 0;
+    color: #0F6E56;
+    font-size: 24px;
+}
+
+.activity-table {
+    height: 290px;
+    border-radius: 6px;
+}
+
+.activity-table th {
+    background-color: #E8F3EF;
+    color: #0F6E56;
+    font-weight: normal;
+}
+
+.activity-table td {
+    background-color: white;
+    color: #294A43;
 }
