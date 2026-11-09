@@ -209,6 +209,12 @@ td a:hover {
     font-size: 13px;
 }
 
+.request-error {
+    display: block;
+    color: #B33A3A;
+    font-size: 11px;
+}
+
 .user-bulk-controls button,
 .update-user-button,
 .delete-user-button {
@@ -349,6 +355,13 @@ body.admin-registration {
     font-size: 13px;
 }
 
+.registration-field .registration-error {
+    display: block;
+    margin-top: 4px;
+    color: #B33A3A;
+    font-size: 12px;
+}
+
 .registration-field input,
 .registration-field select {
     width: 100%;
@@ -359,6 +372,17 @@ body.admin-registration {
     border: 1px solid #D5E1DD;
     border-radius: 4px;
     font: inherit;
+}
+
+.registration-date-fields {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 6px;
+}
+
+.registration-date-fields select {
+    min-width: 0;
+    padding: 8px 4px;
 }
 
 .registration-gender {
@@ -508,6 +532,13 @@ body.admin-login {
     font: inherit;
 }
 
+.login-error {
+    display: block;
+    margin-top: 4px;
+    color: #B33A3A;
+    font-size: 12px;
+}
+
 .login-actions {
     margin-top: 30px;
     overflow: hidden;
@@ -624,6 +655,12 @@ body.admin-dashboard {
     align-items: center;
     gap: 12px;
     margin-bottom: 12px;
+}
+
+.settings-error {
+    grid-column: 2;
+    color: #B33A3A;
+    font-size: 12px;
 }
 
 .password-field label {

@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Manage Requests | PabeKothay</title>
         <link rel="stylesheet" href="../Design/style1.css">
+        <script src="../Script/AdminManageRequests.js" defer></script>
         </head>
     <body class="manage-requests">
         <div class="header">
@@ -57,96 +58,106 @@
                     <td>Engineering Book</td>
                     <td>Mahabubur Rahman</td>
                     <td>
-                        <select aria-label="Type for Engineering Book request">
+                        <select id="request-type-1" aria-label="Type for Engineering Book request">
                             <option value="buy" selected>Buy</option>
                             <option value="exchange">Exchange</option>
                         </select>
+                        <span class="request-error" id="request-type-error-1"></span>
                     </td>
                     <td>
-                        <select aria-label="Status for Engineering Book request">
+                        <select id="request-status-1" aria-label="Status for Engineering Book request">
                             <option value="pending" selected>Pending</option>
                             <option value="approved">Approved</option>
                             <option value="completed">Completed</option>
                             <option value="rejected">Rejected</option>
                         </select>
+                        <span class="request-error" id="request-status-error-1"></span>
                     </td>
-                    <td><button class="update-user-button" type="button">Update</button></td>
+                    <td><button class="update-user-button" type="button" onclick="validate_data('request-status-1', 'request-type-1', 'request-status-error-1', 'request-type-error-1')">Update</button></td>
                 </tr>
                 <tr>
                     <td>Arduino Lab Kit</td>
                     <td>Mahim Khan</td>
                     <td>
-                        <select aria-label="Type for Arduino Lab Kit request">
+                        <select id="request-type-2" aria-label="Type for Arduino Lab Kit request">
                             <option value="buy">Buy</option>
                             <option value="exchange" selected>Exchange</option>
                         </select>
+                        <span class="request-error" id="request-type-error-2"></span>
                     </td>
                     <td>
-                        <select aria-label="Status for Arduino Lab Kit request">
+                        <select id="request-status-2" aria-label="Status for Arduino Lab Kit request">
                             <option value="pending">Pending</option>
                             <option value="approved" selected>Approved</option>
                             <option value="completed">Completed</option>
                             <option value="rejected">Rejected</option>
                         </select>
+                        <span class="request-error" id="request-status-error-2"></span>
                     </td>
-                    <td><button class="update-user-button" type="button">Update</button></td>
+                    <td><button class="update-user-button" type="button" onclick="validate_data('request-status-2', 'request-type-2', 'request-status-error-2', 'request-type-error-2')">Update</button></td>
                 </tr>
                 <tr>
                     <td>Calculator</td>
                     <td>Tushar Ahmed</td>
                     <td>
-                        <select aria-label="Type for Calculator request">
+                        <select id="request-type-3" aria-label="Type for Calculator request">
                             <option value="buy" selected>Buy</option>
                             <option value="exchange">Exchange</option>
                         </select>
+                        <span class="request-error" id="request-type-error-3"></span>
                     </td>
                     <td>
-                        <select aria-label="Status for Calculator request">
+                        <select id="request-status-3" aria-label="Status for Calculator request">
                             <option value="pending">Pending</option>
                             <option value="approved">Approved</option>
                             <option value="completed" selected>Completed</option>
                             <option value="rejected">Rejected</option>
                         </select>
+                        <span class="request-error" id="request-status-error-3"></span>
                     </td>
-                    <td><button class="update-user-button" type="button">Update</button></td>
+                    <td><button class="update-user-button" type="button" onclick="validate_data('request-status-3', 'request-type-3', 'request-status-error-3', 'request-type-error-3')">Update</button></td>
                 </tr>
                 <tr>
                     <td>Backpack</td>
                     <td>Rikti Ahmed</td>
                     <td>
-                        <select aria-label="Type for Backpack request">
+                        <select id="request-type-4" aria-label="Type for Backpack request">
                             <option value="buy">Buy</option>
                             <option value="exchange" selected>Exchange</option>
                         </select>
+                        <span class="request-error" id="request-type-error-4"></span>
                     </td>
                     <td>
-                        <select aria-label="Status for Backpack request">
+                        <select id="request-status-4" aria-label="Status for Backpack request">
                             <option value="pending">Pending</option>
                             <option value="approved">Approved</option>
                             <option value="completed">Completed</option>
                             <option value="rejected" selected>Rejected</option>
                         </select>
+                        <span class="request-error" id="request-status-error-4"></span>
                     </td>
-                    <td><button class="update-user-button" type="button">Update</button></td>
+                    <td><button class="update-user-button" type="button" onclick="validate_data('request-status-4', 'request-type-4', 'request-status-error-4', 'request-type-error-4')">Update</button></td>
                 </tr>
                 <tr>
                     <td>Lab Coat</td>
                     <td>Fabliha Tahsin</td>
                     <td>
-                        <select aria-label="Type for Lab Coat request">
+                        <select id="request-type-5" aria-label="Type for Lab Coat request">
                             <option value="buy" selected>Buy</option>
                             <option value="exchange">Exchange</option>
                         </select>
+                        <span class="request-error" id="request-type-error-5"></span>
                     </td>
                     <td>
-                        <select aria-label="Status for Lab Coat request">
+                        <select id="request-status-5" aria-label="Status for Lab Coat request">
                             <option value="pending" selected>Pending</option>
                             <option value="approved">Approved</option>
                             <option value="completed">Completed</option>
                             <option value="rejected">Rejected</option>
                         </select>
+                        <span class="request-error" id="request-status-error-5"></span>
                     </td>
-                    <td><button class="update-user-button" type="button">Update</button></td>
+                    <td><button class="update-user-button" type="button" onclick="validate_data('request-status-5', 'request-type-5', 'request-status-error-5', 'request-type-error-5')">Update</button></td>
                 </tr>
             </tbody>
         </table>

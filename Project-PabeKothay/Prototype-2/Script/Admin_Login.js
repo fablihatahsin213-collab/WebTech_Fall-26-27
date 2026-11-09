@@ -1,0 +1,53 @@
+function collect_login_data() {
+    let validEmail = validateEmail();
+    let validPassword = validatePassword();
+
+    return false;
+}
+
+function validateEmail() {
+    let email = document.getElementById("work-email").value.trim();
+    let error = document.getElementById("login-email-error");
+    let expression = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    console.log("Login email:", email);
+
+    if (email === "") {
+        error.textContent = "Enter your work email.";
+        console.log("Email validation failed: email is empty.");
+        return false;
+    }
+
+    if (!expression.test(email)) {
+        error.textContent = "Enter a valid email address.";
+        console.log("Email validation failed: invalid email format.");
+        return false;
+    }
+
+    error.textContent = "";
+    console.log("Email validation passed.");
+    return true;
+}
+
+function validatePassword() {
+    let password = document.getElementById("password").value;
+    let error = document.getElementById("login-password-error");
+    console.log("Login password length:", password.length);
+
+    if (password === "") {
+        error.textContent = "Enter your password.";
+        console.log("Password validation failed: password is empty.");
+        return false;
+    }
+
+    if (password.length < 8) {
+        error.textContent = "Password must be at least 8 characters.";
+        console.log("Password validation failed: fewer than 8 characters.");
+        return false;
+    }
+
+    error.textContent = "";
+    console.log("Password validation passed.");
+    return true;
+}
+
+document.getElementById("admin-login-form").onsubmit = collect_login_data;

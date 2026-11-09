@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Admin Registration | PabeKothay</title>
         <link rel="stylesheet" href="../Design/style1.css">
+        <script src="../Script/Admin_reg.js" defer></script>
     </head>
     <body class="admin-registration">
         <header class="header">
@@ -21,26 +22,83 @@
 
             <section class="registration-card" aria-labelledby="registration-form-title">
                 <h2 id="registration-form-title">Admin Access Request</h2>
-                <form action="#" method="post">
+                <form id="admin-registration-form" method="post">
                     <div class="registration-fields">
                         <div class="registration-field field-left">
                             <label for="full-name">Full name</label>
                             <input id="full-name" name="fullName" type="text" autocomplete="name" required>
+                            <span class="registration-error" id="full-name-error"></span>
                         </div>
 
                         <div class="registration-field field-right">
                             <label for="work-email">Official work email</label>
                             <input id="work-email" name="email" type="email" autocomplete="email" required>
+                            <span class="registration-error" id="work-email-error"></span>
                         </div>
 
                         <div class="registration-field field-left">
                             <label for="phone-number">Phone number</label>
                             <input id="phone-number" name="phone" type="tel" autocomplete="tel" required>
+                            <span class="registration-error" id="phone-error"></span>
                         </div>
 
                         <div class="registration-field field-right">
-                            <label for="date-of-birth">Date of birth</label>
-                            <input id="date-of-birth" name="dateOfBirth" type="date" autocomplete="bday" required>
+                            <label>Date of birth</label>
+                            <div class="registration-date-fields">
+                                <select id="dob-day" name="dateOfBirthDay" aria-label="Day of birth" required>
+                                    <option value="">Day</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                                <select id="dob-month" name="dateOfBirthMonth" aria-label="Month of birth" required>
+                                    <option value="">Month</option>
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                                <select id="dob-year" name="dateOfBirthYear" aria-label="Year of birth" required>
+                                    <option value="">Year</option>
+                                </select>
+                            </div>
+                            <span class="registration-error" id="date-of-birth-error"></span>
                         </div>
 
                         <fieldset class="registration-field field-left registration-gender">
@@ -48,6 +106,7 @@
                             <label><input type="radio" name="gender" value="male" required> Male</label>
                             <label><input type="radio" name="gender" value="female" required> Female</label>
                             <label><input type="radio" name="gender" value="other" required> Other</label>
+                            <span class="registration-error" id="gender-error"></span>
                         </fieldset>
 
                         <div class="registration-field field-right">
@@ -58,16 +117,19 @@
                                 <option value="marketplace">Marketplace</option>
                                 <option value="support">Customer Support</option>
                             </select>
+                            <span class="registration-error" id="department-error"></span>
                         </div>
 
                         <div class="registration-field field-left">
                             <label for="password">Create password</label>
                             <input id="password" name="password" type="password" autocomplete="new-password" required>
+                            <span class="registration-error" id="password-error"></span>
                         </div>
 
                         <div class="registration-field field-right">
                             <label for="confirm-password">Confirm password</label>
                             <input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password" required>
+                            <span class="registration-error" id="confirm-password-error"></span>
                         </div>
                     </div>
 

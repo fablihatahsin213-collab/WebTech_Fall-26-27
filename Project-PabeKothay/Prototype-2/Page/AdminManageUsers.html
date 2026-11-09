@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Manage Students | PabeKothay</title>
         <link rel="stylesheet" href="../Design/style1.css">
+        <script src="../Script/AdminManageUsers.js" defer></script>
         </head>
     <body class="manage-students">
         <div class="header">
@@ -79,20 +80,22 @@
                                 <td>24-56556-1</td>
                                 <td>CSE</td>
                                 <td>
-                                    <select class="user-type-select" aria-label="User type for Fabliha Tahsin">
+                                    <select id="user-type-1" class="user-type-select" aria-label="User type for Fabliha Tahsin">
                                         <option value="student" selected>Student</option>
                                         <option value="delivery-man">Delivery Man</option>
                                         <option value="admin">Admin</option>
                                     </select>
+                                    <span class="request-error" id="user-type-error-1"></span>
                                 </td>
                                 <td>
-                                    <select class="user-status-select" aria-label="Status for Fabliha Tahsin">
+                                    <select id="user-status-1" class="user-status-select" aria-label="Status for Fabliha Tahsin">
                                         <option value="active" selected>Active</option>
                                         <option value="inactive">Inactive</option>
                                     </select>
+                                    <span class="request-error" id="user-status-error-1"></span>
                                 </td>
                                 <td>
-                                    <button class="update-user-button" type="button">Update</button>
+                                    <button class="update-user-button" type="button" onclick="validate_data('user-status-1', 'user-type-1', 'user-status-error-1', 'user-type-error-1')">Update</button>
                                     <button class="delete-user-button" type="button">Delete</button>
                                 </td>
                             </tr>
@@ -104,20 +107,22 @@
                                 <td>DEMO-002</td>
                                 <td>BBA</td>
                                 <td>
-                                    <select class="user-type-select" aria-label="User type for Demo User 2">
+                                    <select id="user-type-2" class="user-type-select" aria-label="User type for Demo User 2">
                                         <option value="student" selected>Student</option>
                                         <option value="delivery-man">Delivery Man</option>
                                         <option value="admin">Admin</option>
                                     </select>
+                                    <span class="request-error" id="user-type-error-2"></span>
                                 </td>
                                 <td>
-                                    <select class="user-status-select" aria-label="Status for Demo User 2">
+                                    <select id="user-status-2" class="user-status-select" aria-label="Status for Demo User 2">
                                         <option value="active">Active</option>
                                         <option value="inactive" selected>Inactive</option>
                                     </select>
+                                    <span class="request-error" id="user-status-error-2"></span>
                                 </td>
                                 <td>
-                                    <button class="update-user-button" type="button">Update</button>
+                                    <button class="update-user-button" type="button" onclick="validate_data('user-status-2', 'user-type-2', 'user-status-error-2', 'user-type-error-2')">Update</button>
                                     <button class="delete-user-button" type="button">Delete</button>
                                 </td>
                             </tr>
@@ -129,20 +134,22 @@
                                 <td>DEMO-003</td>
                                 <td>EEE</td>
                                 <td>
-                                    <select class="user-type-select" aria-label="User type for Demo User 3">
+                                    <select id="user-type-3" class="user-type-select" aria-label="User type for Demo User 3">
                                         <option value="student" selected>Student</option>
                                         <option value="delivery-man">Delivery Man</option>
                                         <option value="admin">Admin</option>
                                     </select>
+                                    <span class="request-error" id="user-type-error-3"></span>
                                 </td>
                                 <td>
-                                    <select class="user-status-select" aria-label="Status for Demo User 3">
+                                    <select id="user-status-3" class="user-status-select" aria-label="Status for Demo User 3">
                                         <option value="active" selected>Active</option>
                                         <option value="inactive">Inactive</option>
                                     </select>
+                                    <span class="request-error" id="user-status-error-3"></span>
                                 </td>
                                 <td>
-                                    <button class="update-user-button" type="button">Update</button>
+                                    <button class="update-user-button" type="button" onclick="validate_data('user-status-3', 'user-type-3', 'user-status-error-3', 'user-type-error-3')">Update</button>
                                     <button class="delete-user-button" type="button">Delete</button>
                                 </td>
                             </tr>

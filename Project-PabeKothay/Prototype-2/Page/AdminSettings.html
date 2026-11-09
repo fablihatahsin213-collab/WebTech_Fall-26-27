@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Settings | PabeKothay</title>
         <link rel="stylesheet" href="../Design/style1.css">
+        <script src="../Script/Settings.js" defer></script>
     </head>
     <body class="admin-settings">
         <div class="header">
@@ -29,11 +30,12 @@
 
             <section class="password-card" aria-labelledby="password-settings-title">
                 <h2 id="password-settings-title">Password Settings</h2>
-                <form class="settings-form" action="#" method="post">
+                <form id="settings-form" class="settings-form" method="post" novalidate>
                     <div class="password-field">
                         <label for="current-password">Current Password <span>*</span></label>
                         <input id="current-password" name="currentPassword" type="password"
                             placeholder="Enter current password" autocomplete="current-password" required>
+                        <span class="settings-error" id="current-password-error"></span>
                     </div>
 
                     <div class="password-field">
@@ -41,6 +43,7 @@
                         <input id="new-password" name="newPassword" type="password"
                             placeholder="Enter new password" autocomplete="new-password"
                             minlength="8" required>
+                        <span class="settings-error" id="new-password-error"></span>
                     </div>
 
                     <div class="password-field">
@@ -48,6 +51,7 @@
                         <input id="confirm-password" name="confirmPassword" type="password"
                             placeholder="Confirm new password" autocomplete="new-password"
                             minlength="8" required>
+                        <span class="settings-error" id="confirm-password-error"></span>
                     </div>
 
                     <div class="password-requirements">
