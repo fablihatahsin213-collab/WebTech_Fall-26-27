@@ -10,11 +10,11 @@
             <image src="pabekothay logo 1.jpeg" id="logo"></image>
             <h2>PabeKothay </h2>
             <p class="tagline">Find what you need, share what you have</p>
-            <p>Admin Panel | Administration</p>
+            <p class="portal-label">Admin Portal</p>
             </div>
             <div class="sidebar">
                 <a href="AdminDashboard.html">Dashboard</a>
-                <a href="AdminManageStudents.html">Students</a>
+                <a href="AdminManageUsers.html">Users</a>
                 <a href="AdminManagePosts.html">Posts</a>
                 <a href="AdminManageRequests.html">Requests</a>
                 <a href="AdminSettings.html">Settings</a>
@@ -34,49 +34,98 @@
                         </select>
 
                         <select name="status">
-                            <option value="">All status</option>
-                            <option value="Active">Active</option>
-                            <option value="Ünder Review">Under Review</option>
-                          
-
+                            <option value="">All statuses</option>
+                            <option value="active">Active</option>
+                            <option value="pending">Pending</option>
+                            <option value="rejected">Rejected</option>
                         </select>
 
                         <input type="submit" value="Search">
                         </form>
-                        <table>
-                            <tr>
-                                <th>Item</th>
-                                <th>Owner</th>
-                                <th>Category</th>
-                                <th>Status</th>
-                                <th>Actions</th>
-                            </tr>
+                        <section class="user-bulk-controls post-bulk-controls" aria-label="Bulk post actions">
+                            <label for="select-all-posts">Select All</label>
+                            <input id="select-all-posts" type="checkbox">
 
-                            <tr>
-                                <td>Engineering Book</td>
-                                <td>Mahim Khan</td>
-                                <td>Books</td>
-                                <td>Active</td>
-                                <td><a href="PostDetails.html">View</a> 
-                                    </td>
-                            </tr>
-                            <tr>
-                                <td>Arduino lab kit </td>
-                                <td>Rikti Ahmed</td>
-                                <td>Lab kits</td>
-                                <td>Under Review</td>
-                                <td><a href="PostDetails.html">Review</a>
-                                    </td>
-                            </tr>
-                            <tr>
-                                <td>Chemistry Lab Apron</td>
-                                <td>Fabliha Tahsin</td>
-                                <td>Accessories</td>
-                                <td>Under Review</td>
-                                <td><a href="PostDetails.html">Review</a></td>
-                            </tr>
+                            <label for="post-bulk-action">Bulk action</label>
+                            <select id="post-bulk-action" name="bulkAction">
+                                <option value="">Choose action</option>
+                                <option value="active">Active</option>
+                                <option value="pending">Pending</option>
+                                <option value="rejected">Rejected</option>
+                            </select>
+                            <button type="button">Apply</button>
+                        </section>
+
+                        <div class="user-table-wrap">
+                            <table class="user-management-table post-management-table">
+                                <thead>
+                                    <tr>
+                                        <th>Post</th>
+                                        <th>Owner</th>
+                                        <th>Category</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input class="post-row-select" type="checkbox" aria-label="Select Engineering Book">
+                                            Engineering Book
+                                        </td>
+                                        <td>Mahim Khan</td>
+                                        <td>Books</td>
+                                        <td>
+                                            <select aria-label="Status for Engineering Book">
+                                                <option value="active" selected>Active</option>
+                                                <option value="pending">Pending</option>
+                                                <option value="rejected">Rejected</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <button class="update-user-button" type="button">Update</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="post-row-select" type="checkbox" aria-label="Select Arduino Lab Kit">
+                                            Arduino Lab Kit
+                                        </td>
+                                        <td>Rikti Ahmed</td>
+                                        <td>Lab kits</td>
+                                        <td>
+                                            <select aria-label="Status for Arduino Lab Kit">
+                                                <option value="active">Active</option>
+                                                <option value="pending" selected>Pending</option>
+                                                <option value="rejected">Rejected</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <button class="update-user-button" type="button">Update</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input class="post-row-select" type="checkbox" aria-label="Select Chemistry Lab Apron">
+                                            Chemistry Lab Apron
+                                        </td>
+                                        <td>Fabliha Tahsin</td>
+                                        <td>Accessories</td>
+                                        <td>
+                                            <select aria-label="Status for Chemistry Lab Apron">
+                                                <option value="active">Active</option>
+                                                <option value="pending" selected>Pending</option>
+                                                <option value="rejected">Rejected</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <button class="update-user-button" type="button">Update</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
                             </table>
-                            <p>Select a post to review its details or manage its visibility.</p>
+                        </div>
+                        <p>Select posts to apply a bulk action, or choose a status and click Update for an individual post.</p>
 
 
             </div>

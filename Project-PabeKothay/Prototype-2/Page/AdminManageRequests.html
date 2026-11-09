@@ -10,11 +10,11 @@
             <image src="pabekothay logo 1.jpeg" id="logo"></image>
             <h2>PabeKothay </h2>
             <p class="tagline">Find what you need, share what you have</p>
-            <p>Admin Panel | Administration</p>
+            <p class="portal-label">Admin Portal</p>
             </div>
             <div class="sidebar">
                 <a href="AdminDashboard.html">Dashboard</a>
-                <a href="AdminManageStudents.html">Students</a>
+                <a href="AdminManageUsers.html">Users</a>
                 <a href="AdminManagePosts.html">Posts</a>
                 <a href="AdminManageRequests.html">Requests</a>
                 <a href="AdminSettings.html">Settings</a>
@@ -42,7 +42,7 @@
             <input type="submit" value="Filter">
         </form>
 
-        <table>
+        <table class="request-management-table">
             <thead>
                 <tr>
                     <th>Item</th>
@@ -56,37 +56,97 @@
                 <tr>
                     <td>Engineering Book</td>
                     <td>Mahabubur Rahman</td>
-                    <td>Buy</td>
-                    <td>Pending</td>
-                    <td><a href="RequestDetails.html">Review</a></td>
+                    <td>
+                        <select aria-label="Type for Engineering Book request">
+                            <option value="buy" selected>Buy</option>
+                            <option value="exchange">Exchange</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select aria-label="Status for Engineering Book request">
+                            <option value="pending" selected>Pending</option>
+                            <option value="approved">Approved</option>
+                            <option value="completed">Completed</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                    </td>
+                    <td><button class="update-user-button" type="button">Update</button></td>
                 </tr>
                 <tr>
                     <td>Arduino Lab Kit</td>
                     <td>Mahim Khan</td>
-                    <td>Exchange</td>
-                    <td>Approved</td>
-                    <td><a href="RequestDetails.html">Update</a></td>
+                    <td>
+                        <select aria-label="Type for Arduino Lab Kit request">
+                            <option value="buy">Buy</option>
+                            <option value="exchange" selected>Exchange</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select aria-label="Status for Arduino Lab Kit request">
+                            <option value="pending">Pending</option>
+                            <option value="approved" selected>Approved</option>
+                            <option value="completed">Completed</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                    </td>
+                    <td><button class="update-user-button" type="button">Update</button></td>
                 </tr>
                 <tr>
                     <td>Calculator</td>
                     <td>Tushar Ahmed</td>
-                    <td>Buy</td>
-                    <td>Completed</td>
-                    <td><a href="RequestDetails.html">View</a></td>
+                    <td>
+                        <select aria-label="Type for Calculator request">
+                            <option value="buy" selected>Buy</option>
+                            <option value="exchange">Exchange</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select aria-label="Status for Calculator request">
+                            <option value="pending">Pending</option>
+                            <option value="approved">Approved</option>
+                            <option value="completed" selected>Completed</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                    </td>
+                    <td><button class="update-user-button" type="button">Update</button></td>
                 </tr>
                 <tr>
                     <td>Backpack</td>
                     <td>Rikti Ahmed</td>
-                    <td>Exchange</td>
-                    <td>Rejected</td>
-                    <td><a href="RequestDetails.html">View reason</a></td>
+                    <td>
+                        <select aria-label="Type for Backpack request">
+                            <option value="buy">Buy</option>
+                            <option value="exchange" selected>Exchange</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select aria-label="Status for Backpack request">
+                            <option value="pending">Pending</option>
+                            <option value="approved">Approved</option>
+                            <option value="completed">Completed</option>
+                            <option value="rejected" selected>Rejected</option>
+                        </select>
+                    </td>
+                    <td><button class="update-user-button" type="button">Update</button></td>
                 </tr>
                 <tr>
                     <td>Lab Coat</td>
                     <td>Fabliha Tahsin</td>
-                    <td>Buy</td>
-                    <td>Pending</td>
-                    <td><a href="RequestDetails.html">Review</a></td>
+                    <td>
+                        <select aria-label="Type for Lab Coat request">
+                            <option value="buy" selected>Buy</option>
+                            <option value="exchange">Exchange</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select aria-label="Status for Lab Coat request">
+                            <option value="pending" selected>Pending</option>
+                            <option value="approved">Approved</option>
+                            <option value="completed">Completed</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                    </td>
+                    <td><button class="update-user-button" type="button">Update</button></td>
                 </tr>
             </tbody>
         </table>

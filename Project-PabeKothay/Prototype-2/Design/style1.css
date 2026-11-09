@@ -13,6 +13,7 @@ body {
 }
 
 .header {
+    position: relative;
     height: 65px;
     padding: 10px 20px;
     overflow: hidden;
@@ -44,11 +45,14 @@ body {
     font-size: 10px;
 }
 
-.header p:last-child {
-    float: right;
-    margin: 12px 10px 0 0;
+.header .portal-label {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    margin: 0;
     color: #71817D;
     font-size: 13px;
+    line-height: 35px;
 }
 
 .sidebar {
@@ -186,6 +190,97 @@ td a:hover {
     text-decoration: underline;
 }
 
+.user-bulk-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0 10px;
+    padding: 12px;
+    background-color: #F4F7F6;
+    border: 1px solid #DDE7E3;
+}
+
+.user-bulk-controls select,
+.user-management-table select,
+.request-management-table select {
+    width: auto;
+    padding: 7px;
+    font-size: 13px;
+}
+
+.user-bulk-controls button,
+.update-user-button,
+.delete-user-button {
+    padding: 8px 12px;
+    color: white;
+    background-color: #0F6E56;
+    border: 0;
+    border-radius: 4px;
+    font: inherit;
+    cursor: pointer;
+}
+
+.user-bulk-controls button:hover,
+.update-user-button:hover {
+    background-color: #0B5945;
+}
+
+.delete-user-button {
+    background-color: #B33A3A;
+}
+
+.delete-user-button:hover {
+    background-color: #922E2E;
+}
+
+.user-table-wrap {
+    overflow-x: auto;
+}
+
+.post-bulk-controls input[type="checkbox"],
+.post-management-table input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.post-management-table {
+    min-width: 760px;
+}
+
+.post-management-table th:last-child,
+.post-management-table td:last-child {
+    text-align: center;
+}
+
+.post-management-table .update-user-button {
+    margin-right: 6px;
+}
+
+.user-management-table {
+    min-width: 760px;
+}
+
+.user-management-table th,
+.user-management-table td {
+    padding: 9px 8px;
+    vertical-align: middle;
+}
+
+.user-management-table th:last-child,
+.user-management-table td:last-child {
+    text-align: center;
+}
+
+.user-management-table input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.user-management-table .update-user-button {
+    margin-right: 6px;
+}
+
 .small-footer {
     clear: both;
     padding: 12px;
@@ -195,18 +290,6 @@ td a:hover {
 body.admin-registration {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-body.admin-registration .header {
-    position: relative;
-}
-
-body.admin-registration .header p:last-child {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    margin: 0;
-    line-height: 35px;
 }
 
 .registration-main {
@@ -253,7 +336,10 @@ body.admin-registration .header p:last-child {
 }
 
 .registration-fields {
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 4%;
+    row-gap: 16px;
 }
 
 .registration-field label {
@@ -275,18 +361,37 @@ body.admin-registration .header p:last-child {
     font: inherit;
 }
 
+.registration-gender {
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+}
+
+.registration-gender legend {
+    margin-bottom: 5px;
+    color: #52635F;
+    font-size: 13px;
+}
+
+.registration-gender label {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 16px 0 0;
+    color: #294A43;
+}
+
+.registration-gender input[type="radio"] {
+    width: auto;
+    min-height: 0;
+    margin: 0 6px 0 0;
+    padding: 0;
+}
+
 .registration-field {
-    width: 48%;
-    margin-bottom: 16px;
-    float: left;
-}
-
-.registration-field.field-left {
-    clear: left;
-}
-
-.registration-field.field-right {
-    margin-left: 4%;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
 }
 
 .registration-actions {
@@ -338,18 +443,6 @@ body.admin-registration .header p:last-child {
 body.admin-login {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-body.admin-login .header {
-    position: relative;
-}
-
-body.admin-login .header p:last-child {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    margin: 0;
-    line-height: 35px;
 }
 
 .login-main {
@@ -458,23 +551,148 @@ body.admin-login .header p:last-child {
     color: #71817D;
 }
 
+body.admin-dashboard .header,
+body.admin-login .header,
+body.admin-registration .header,
+body.manage-students .header,
+body.admin-manage-posts .header,
+body.manage-requests .header,
+body.admin-settings .header {
+    position: relative;
+    height: 58px;
+    padding: 10px 12px;
+}
+
 body.admin-dashboard {
     min-height: 100vh;
     padding: 8px 18px;
 }
 
-.admin-dashboard .header {
-    height: 58px;
-    padding: 10px 12px;
-}
-
-.admin-dashboard .header p:last-child {
-    margin-top: 10px;
-}
-
 .admin-dashboard .sidebar {
     width: 18%;
     min-height: 538px;
+}
+
+.admin-settings .sidebar {
+    min-height: 538px;
+}
+
+.admin-settings .sidebar a[href="AdminSettings.html"] {
+    background-color: #0F6E56;
+    border-left: 4px solid #D85A30;
+    color: white;
+}
+
+.settings-main {
+    min-height: 538px;
+}
+
+.settings-main > h1 {
+    margin-bottom: 4px;
+}
+
+.settings-main > p {
+    margin: 0 0 18px;
+    color: #666666;
+}
+
+.password-card {
+    margin: 18px 4px;
+    background-color: white;
+    border: 1px solid #D5E1DD;
+    border-radius: 8px;
+}
+
+.password-card h2 {
+    margin: 0;
+    padding: 14px 20px;
+    color: #0F6E56;
+    background-color: #E8F3EF;
+    border-radius: 8px 8px 0 0;
+    font-size: 19px;
+}
+
+.settings-form {
+    margin: 0;
+    padding: 18px 24px;
+    border: 0;
+}
+
+.password-field {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.password-field label {
+    color: #294A43;
+    font-weight: bold;
+}
+
+.password-field label span {
+    color: #B33A3A;
+}
+
+.password-field input {
+    width: 100%;
+    min-height: 38px;
+    padding: 8px 12px;
+    border: 1px solid #D5E1DD;
+    border-radius: 5px;
+    font: inherit;
+}
+
+.password-requirements {
+    margin: 16px 0;
+    padding: 12px 16px;
+    background-color: #F0F7F5;
+    border: 1px solid #E0ECE8;
+    border-radius: 6px;
+}
+
+.password-requirements strong {
+    color: #0F6E56;
+}
+
+.password-requirements ul {
+    margin: 6px 0 0 20px;
+    padding-left: 16px;
+}
+
+.password-requirements li {
+    margin: 3px 0;
+}
+
+.settings-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.settings-actions button {
+    min-height: 38px;
+    padding: 8px 16px;
+    border: 1px solid #0F6E56;
+    border-radius: 5px;
+    font: inherit;
+    cursor: pointer;
+}
+
+.settings-reset {
+    color: #0F6E56;
+    background-color: white;
+}
+
+.settings-submit {
+    color: white;
+    background-color: #0F6E56;
+}
+
+.settings-actions button:hover {
+    filter: brightness(0.94);
 }
 
 .admin-dashboard .dashboard-active {

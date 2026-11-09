@@ -10,7 +10,7 @@
             <img src="pabekothay logo 1.jpeg" id="logo" alt="PabeKothay logo">
             <h2>PabeKothay </h2>
             <p class="tagline">Find what you need, share what you have</p>
-            <p>Admin Portal</p>
+            <p class="portal-label">Admin Portal</p>
         </header>
 
         <main class="registration-main">
@@ -29,20 +29,6 @@
                         </div>
 
                         <div class="registration-field field-right">
-                            <label for="date-of-birth">Date of birth</label>
-                            <input id="date-of-birth" name="dateOfBirth" type="date" autocomplete="bday" required>
-                        </div>
-
-                        <div class="registration-field field-left">
-                            <label for="gender">Gender</label>
-                            <select id="gender" name="gender" required>
-                                <option value="" selected disabled>Select gender</option>
-                                <option value="female">Female</option>
-                                <option value="male">Male</option>
-                            </select>
-                        </div>
-
-                        <div class="registration-field field-right">
                             <label for="work-email">Official work email</label>
                             <input id="work-email" name="email" type="email" autocomplete="email" required>
                         </div>
@@ -53,13 +39,24 @@
                         </div>
 
                         <div class="registration-field field-right">
+                            <label for="date-of-birth">Date of birth</label>
+                            <input id="date-of-birth" name="dateOfBirth" type="date" autocomplete="bday" required>
+                        </div>
+
+                        <fieldset class="registration-field field-left registration-gender">
+                            <legend>Gender</legend>
+                            <label><input type="radio" name="gender" value="male" required> Male</label>
+                            <label><input type="radio" name="gender" value="female" required> Female</label>
+                            <label><input type="radio" name="gender" value="other" required> Other</label>
+                        </fieldset>
+
+                        <div class="registration-field field-right">
                             <label for="department">Admin department</label>
                             <select id="department" name="department" required>
                                 <option value="" selected disabled>Select department</option>
                                 <option value="student-accounts">Student Accounts</option>
                                 <option value="marketplace">Marketplace</option>
                                 <option value="support">Customer Support</option>
-                                <option value="general">General Administration</option>
                             </select>
                         </div>
 
