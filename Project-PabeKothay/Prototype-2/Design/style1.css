@@ -12,7 +12,7 @@ body {
     font-size: 13px;
 }
 
-.header {
+.header, .hdr {
     position: relative;
     height: 65px;
     padding: 10px 20px;
@@ -29,7 +29,7 @@ body {
     border-radius: 50%;
 }
 
-.header h2 {
+.header h2, .hdr h2 {
     float: left;
     margin: 0;
     color: #193F36;
@@ -37,7 +37,7 @@ body {
     line-height: 35px;
 }
 
-.header .tagline {
+.header .tagline, .hdr .tag, .tagline, .tag {
     float: left;
     clear: left;
     margin: -2px 0 0 38px;
@@ -45,7 +45,7 @@ body {
     font-size: 10px;
 }
 
-.header .portal-label {
+.header .portal-label, .hdr .port, .portal-label, .port {
     position: absolute;
     top: 10px;
     right: 12px;
@@ -55,7 +55,7 @@ body {
     line-height: 35px;
 }
 
-.sidebar {
+.sidebar, .side {
     position: relative;
     float: left;
     width: 18%;
@@ -65,7 +65,7 @@ body {
     border: 1px solid #D5E5DF;
 }
 
-.sidebar a {
+.sidebar a, .side a {
     display: block;
     margin-bottom: 5px;
     padding: 10px 12px;
@@ -75,29 +75,26 @@ body {
     text-decoration: none;
 }
 
-.sidebar a:hover {
+.sidebar a:hover, .side a:hover {
     background-color: #DDECE6;
 }
 
-.sidebar .logout-link {
+.sidebar .logout-link, .side .out, .logout-link, .out {
     position: absolute;
     right: 12px;
     bottom: 12px;
     left: 12px;
 }
 
-body.manage-posts .sidebar a[href="ManagePosts.html"],
-body.manage-students .sidebar a[href="ManageStudents.html"],
-body.manage-requests .sidebar a[href="ManageRequests.html"],
-body.manage-students .sidebar a[href="AdminManageStudents.html"],
-body.manage-requests .sidebar a[href="AdminManageRequests.html"],
-body.admin-manage-posts .sidebar a[href="AdminManagePosts.html"] {
+body#posts .side a[href="AdminManagePosts.html"],
+body#users .side a[href="AdminManageUsers.html"],
+body#req .side a[href="AdminManageRequests.html"] {
     background-color: #0F6E56;
     border-left: 4px solid #D85A30;
     color: white;
 }
 
-.main {
+.main, .box {
     min-height: 550px;
     margin-left: 18%;
     padding: 25px;
@@ -105,13 +102,13 @@ body.admin-manage-posts .sidebar a[href="AdminManagePosts.html"] {
     border: 1px solid #DDE7E3;
 }
 
-.main h1 {
+.main h1, .box h1 {
     margin: 0 0 5px;
     color: #0F6E56;
     font-size: 28px;
 }
 
-.main p {
+.main p, .box p {
     color: #666666;
 }
 
@@ -130,7 +127,7 @@ input[type="text"] {
     border: 1px solid #DDE7E3;
 }
 
-.student-search input[type="text"] {
+.student-search input[type="text"], .srch input[type="text"] {
     width: 83%;
 }
 
@@ -190,7 +187,7 @@ td a:hover {
     text-decoration: underline;
 }
 
-.user-bulk-controls {
+.user-bulk-controls, .bulk {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -203,13 +200,16 @@ td a:hover {
 
 .user-bulk-controls select,
 .user-management-table select,
-.request-management-table select {
+.request-management-table select,
+.bulk select,
+.utable select,
+.rtable select {
     width: auto;
     padding: 7px;
     font-size: 13px;
 }
 
-.request-error {
+.request-error, .err {
     display: block;
     color: #B33A3A;
     font-size: 11px;
@@ -217,7 +217,10 @@ td a:hover {
 
 .user-bulk-controls button,
 .update-user-button,
-.delete-user-button {
+.delete-user-button,
+.bulk button,
+.upd,
+.del {
     padding: 8px 12px;
     color: white;
     background-color: #0F6E56;
@@ -228,62 +231,75 @@ td a:hover {
 }
 
 .user-bulk-controls button:hover,
-.update-user-button:hover {
+.update-user-button:hover,
+.bulk button:hover,
+.upd:hover {
     background-color: #0B5945;
 }
 
-.delete-user-button {
+.delete-user-button, .del {
     background-color: #B33A3A;
 }
 
-.delete-user-button:hover {
+.delete-user-button:hover, .del:hover {
     background-color: #922E2E;
 }
 
-.user-table-wrap {
+.user-table-wrap, .wrap {
     overflow-x: auto;
 }
 
 .post-bulk-controls input[type="checkbox"],
-.post-management-table input[type="checkbox"] {
+.post-management-table input[type="checkbox"],
+.pbulk input[type="checkbox"],
+.ptable input[type="checkbox"] {
     width: auto;
     margin: 0;
 }
 
-.post-management-table {
+.post-management-table, .ptable {
     min-width: 760px;
 }
 
 .post-management-table th:last-child,
-.post-management-table td:last-child {
+.post-management-table td:last-child,
+.ptable th:last-child,
+.ptable td:last-child {
     text-align: center;
 }
 
-.post-management-table .update-user-button {
+.post-management-table .update-user-button,
+.ptable .upd {
     margin-right: 6px;
 }
 
-.user-management-table {
+.user-management-table, .utable {
     min-width: 760px;
 }
 
 .user-management-table th,
-.user-management-table td {
+.user-management-table td,
+.utable th,
+.utable td {
     padding: 9px 8px;
     vertical-align: middle;
 }
 
 .user-management-table th:last-child,
-.user-management-table td:last-child {
+.user-management-table td:last-child,
+.utable th:last-child,
+.utable td:last-child {
     text-align: center;
 }
 
-.user-management-table input[type="checkbox"] {
+.user-management-table input[type="checkbox"],
+.utable input[type="checkbox"] {
     width: auto;
     margin: 0;
 }
 
-.user-management-table .update-user-button {
+.user-management-table .update-user-button,
+.utable .upd {
     margin-right: 6px;
 }
 
@@ -293,69 +309,77 @@ td a:hover {
     text-align: center;
 }
 
-body.admin-registration {
+body#reg {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.registration-main {
+.registration-main, .reg-main {
     width: 680px;
     margin: 0 auto;
     padding: 54px 0 32px;
 }
 
-.registration-intro {
+.registration-intro, .reg-intro {
     margin-bottom: 22px;
     text-align: center;
 }
 
-.registration-intro h1 {
+.registration-intro h1, .reg-intro h1 {
     margin: 0 0 6px;
     color: #0F6E56;
     font-size: 26px;
 }
 
-.registration-intro p {
+.registration-intro p, .reg-intro p {
     margin: 0;
     color: #666666;
     font-size: 14px;
     line-height: 1.5;
 }
 
-.registration-card {
+.registration-card, .reg-card {
     padding: 20px 30px;
     background-color: white;
     border: 1px solid #DDE7E3;
     border-radius: 10px;
 }
 
-.registration-card h2 {
+.registration-card h2, .reg-card h2 {
     margin: 0 0 18px;
     color: #294A43;
     font-size: 20px;
 }
 
-.registration-card form {
+.registration-card form, .reg-card form {
     margin: 0;
     padding: 0;
     border: 0;
 }
 
-.registration-fields {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 4%;
-    row-gap: 16px;
+.registration-fields, .reg-fields {
+    overflow: hidden;
 }
 
-.registration-field label {
+.reg-field.lft,
+.reg-field.rgt {
+    float: left;
+    width: 48%;
+    margin-bottom: 16px;
+}
+
+.reg-field.lft {
+    margin-right: 4%;
+}
+
+.registration-field label, .reg-field label {
     display: block;
     margin-bottom: 5px;
     color: #52635F;
     font-size: 13px;
 }
 
-.registration-field .registration-error {
+.registration-field .registration-error, .reg-field .set-err {
     display: block;
     margin-top: 4px;
     color: #B33A3A;
@@ -363,7 +387,9 @@ body.admin-registration {
 }
 
 .registration-field input,
-.registration-field select {
+.registration-field select,
+.reg-field input,
+.reg-field select {
     width: 100%;
     min-height: 38px;
     padding: 8px 10px;
@@ -374,57 +400,62 @@ body.admin-registration {
     font: inherit;
 }
 
-.registration-date-fields {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr;
-    gap: 6px;
+.registration-date-fields, .dates {
+    overflow: hidden;
 }
 
-.registration-date-fields select {
+.registration-date-fields select, .dates select {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
     min-width: 0;
     padding: 8px 4px;
 }
 
-.registration-gender {
+.registration-date-fields select:last-child, .dates select:last-child {
+    margin-right: 0;
+}
+
+.registration-gender, .gender {
     box-sizing: border-box;
     min-width: 0;
     padding: 0;
     border: 0;
 }
 
-.registration-gender legend {
+.registration-gender legend, .gender legend {
     margin-bottom: 5px;
     color: #52635F;
     font-size: 13px;
 }
 
-.registration-gender label {
+.registration-gender label, .gender label {
     display: inline-flex;
     align-items: center;
     margin: 0 16px 0 0;
     color: #294A43;
 }
 
-.registration-gender input[type="radio"] {
+.registration-gender input[type="radio"], .gender input[type="radio"] {
     width: auto;
     min-height: 0;
     margin: 0 6px 0 0;
     padding: 0;
 }
 
-.registration-field {
+.registration-field, .reg-field {
     width: 100%;
     min-width: 0;
     margin: 0;
 }
 
-.registration-actions {
+.registration-actions, .act {
     clear: both;
     margin-top: 24px;
     overflow: hidden;
 }
 
-.registration-actions button {
+.registration-actions button, .act button {
     min-height: 42px;
     width: 65%;
     padding: 10px 16px;
@@ -438,11 +469,11 @@ body.admin-registration {
     float: left;
 }
 
-.registration-actions button:hover {
+.registration-actions button:hover, .act button:hover {
     background-color: #D85A30;
 }
 
-.registration-actions p {
+.registration-actions p, .act p {
     margin: 14px 0 0 2%;
     color: #52635F;
     font-size: 13px;
@@ -450,79 +481,97 @@ body.admin-registration {
     float: left;
 }
 
-.registration-actions a {
+.registration-actions a, .act a {
     color: #0F6E56;
     text-decoration: none;
 }
 
-.registration-actions a:hover {
+.registration-actions a:hover, .act a:hover {
     text-decoration: underline;
 }
 
-.admin-registration .small-footer {
+body#reg .small-footer {
     margin-top: 20px;
     color: #71817D;
 }
 
-body.admin-login {
+body#log {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.login-main {
-    width: 665px;
-    margin: 0 auto;
-    padding: 160px 0 32px;
+body#log .hdr {
+    height: 90px;
+    padding: 27px 34px;
 }
 
-.login-intro {
+body#log #logo {
+    margin-right: 18px;
+}
+
+body#log .tag {
+    margin-left: 43px;
+}
+
+body#log .port {
+    top: 20px;
+    right: 20px;
+}
+
+.log-main {
+    width: 710px;
+    margin: 0 auto;
+    padding: 44px 0 32px;
+}
+
+.log-intro {
     margin-bottom: 22px;
     text-align: center;
 }
 
-.login-intro h1 {
+.log-intro h1 {
     margin: 0 0 6px;
     color: #0F6E56;
     font-size: 26px;
 }
 
-.login-intro p {
+.log-intro p {
     margin: 0;
     color: #666666;
     font-size: 14px;
 }
 
-.login-card {
+.log-card {
     padding: 20px 30px;
     background-color: white;
     border: 1px solid #DDE7E3;
     border-radius: 10px;
 }
 
-.login-card h2 {
+.log-card h2 {
     margin: 0 0 18px;
     color: #294A43;
     font-size: 20px;
 }
 
-.login-card form {
+.log-card form {
     margin: 0;
     padding: 0;
     border: 0;
 }
 
-.login-field {
+.log-field {
     margin-bottom: 20px;
 }
 
-.login-field label {
+.log-field label {
     display: block;
     margin-bottom: 5px;
     color: #52635F;
     font-size: 13px;
 }
 
-.login-field input {
+.log-field input {
     width: 100%;
     height: 38px;
     padding: 8px 10px;
@@ -532,19 +581,19 @@ body.admin-login {
     font: inherit;
 }
 
-.login-error {
+.log-field .err {
     display: block;
     margin-top: 4px;
     color: #B33A3A;
     font-size: 12px;
 }
 
-.login-actions {
+.log-actions {
     margin-top: 30px;
     overflow: hidden;
 }
 
-.login-actions button {
+.log-actions button {
     width: 70%;
     height: 42px;
     float: left;
@@ -557,44 +606,44 @@ body.admin-login {
     cursor: pointer;
 }
 
-.login-actions button:hover {
+.log-actions button:hover {
     background-color: #D85A30;
 }
 
-.login-actions p {
+.log-actions p {
     margin: 12px 0 0 2%;
     float: left;
     color: #52635F;
     font-size: 13px;
 }
 
-.login-actions a {
+.log-actions a {
     color: #0F6E56;
     text-decoration: none;
 }
 
-.login-actions a:hover {
+.log-actions a:hover {
     text-decoration: underline;
 }
 
-.admin-login .small-footer {
+body#log .small-footer {
     margin-top: 20px;
     color: #71817D;
 }
 
-body.admin-dashboard .header,
-body.admin-login .header,
-body.admin-registration .header,
-body.manage-students .header,
-body.admin-manage-posts .header,
-body.manage-requests .header,
-body.admin-settings .header {
+body#dash .hdr,
+body#log .hdr,
+body#reg .hdr,
+body#users .hdr,
+body#posts .hdr,
+body#req .hdr,
+body#set .hdr {
     position: relative;
     height: 58px;
     padding: 10px 12px;
 }
 
-body.admin-dashboard {
+body#dash {
     min-height: 100vh;
     padding: 8px 18px;
 }
@@ -650,20 +699,21 @@ body.admin-dashboard {
 }
 
 .password-field {
-    display: grid;
-    grid-template-columns: 190px minmax(0, 1fr);
-    align-items: center;
-    gap: 12px;
+    overflow: hidden;
     margin-bottom: 12px;
 }
 
 .settings-error {
-    grid-column: 2;
+    clear: both;
+    margin-left: 202px;
     color: #B33A3A;
     font-size: 12px;
 }
 
 .password-field label {
+    float: left;
+    width: 190px;
+    margin-right: 12px;
     color: #294A43;
     font-weight: bold;
 }
@@ -673,7 +723,8 @@ body.admin-dashboard {
 }
 
 .password-field input {
-    width: 100%;
+    float: left;
+    width: 60%;
     min-height: 38px;
     padding: 8px 12px;
     border: 1px solid #D5E1DD;
@@ -732,38 +783,43 @@ body.admin-dashboard {
     filter: brightness(0.94);
 }
 
-.admin-dashboard .dashboard-active {
+body.dash {
+    min-height: 100vh;
+    padding: 8px 18px;
+}
+
+.side .act {
     background-color: #0F6E56;
     border-left: 4px solid #D85A30;
     color: white;
 }
 
-.dashboard-main {
+.dash-main {
     min-height: 538px;
     margin-left: 18%;
     padding: 25px 28px;
     background-color: #F0F5F4;
 }
 
-.dashboard-main h1 {
+.dash-main h1 {
     margin: 0 0 4px;
     color: #0F6E56;
     font-size: 28px;
 }
 
-.dashboard-description {
+.dash-desc {
     margin: 0 0 18px;
     color: #666666;
 }
 
-.dashboard-summary {
+.dash-sum {
     overflow: hidden;
     margin-bottom: 20px;
 }
 
-.summary-card {
+.sum-card {
     width: 23.5%;
-    height: 84px;
+    height: 90px;
     margin-right: 2%;
     padding: 10px;
     float: left;
@@ -772,33 +828,190 @@ body.admin-dashboard {
     border-radius: 6px;
 }
 
-.summary-card:last-child {
+.sum-card:last-child {
     margin-right: 0;
 }
 
-.summary-card p {
+.sum-card p {
     margin: 0;
     color: #666666;
 }
 
-.summary-card h2 {
+.sum-card h2 {
     margin: 5px 0 0;
     color: #0F6E56;
     font-size: 24px;
 }
 
-.activity-table {
-    height: 290px;
+.act-table {
     border-radius: 6px;
 }
 
-.activity-table th {
+.act-table th {
     background-color: #E8F3EF;
     color: #0F6E56;
     font-weight: normal;
 }
 
-.activity-table td {
+.act-table td {
+    height: 88px;
     background-color: white;
     color: #294A43;
+}
+
+body#set {
+    background-color: white;
+}
+
+body#set .hdr {
+    height: 90px;
+    padding: 27px 34px;
+}
+
+body#set #logo {
+    margin-right: 18px;
+}
+
+body#set .tag {
+    margin-left: 43px;
+}
+
+body#set .port {
+    top: 20px;
+    right: 20px;
+}
+
+body#set .side {
+    width: 18%;
+    min-height: 550px;
+    background-color: #F4F9F7;
+    border-color: #DDE7E3;
+}
+
+body#set .side a {
+    margin-bottom: 6px;
+    padding: 12px 14px;
+    background-color: #E8F3EF;
+    color: #397366;
+}
+
+body#set .side a[href="AdminSettings.html"] {
+    background-color: #0F6E56;
+    border-left: 4px solid #D85A30;
+    color: white;
+}
+
+body#set .box {
+    min-height: 550px;
+    padding: 16px 34px;
+    background-color: white;
+    border-color: #E2E9E6;
+}
+
+body#set .box h1 {
+    margin-bottom: 4px;
+    font-size: 34px;
+}
+
+body#set .box > p {
+    margin: 0 0 20px;
+    color: #666666;
+    font-size: 16px;
+}
+
+body#set .p-card {
+    margin: 0 0 20px;
+    background-color: white;
+    border: 1px solid #DDE7E3;
+    border-radius: 10px;
+}
+
+body#set .p-card h2 {
+    margin: 0;
+    padding: 16px 24px;
+    background-color: #E8F3EF;
+    border-radius: 10px 10px 0 0;
+    color: #0F6E56;
+    font-size: 22px;
+}
+
+body#set .set-form {
+    margin: 0;
+    padding: 22px 30px;
+    border: 0;
+}
+
+body#set .p-field {
+    min-height: 48px;
+    margin-bottom: 14px;
+    overflow: hidden;
+}
+
+body#set .p-field label {
+    width: 28%;
+    margin: 14px 0 0;
+    float: left;
+    color: #294A43;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+body#set .p-field input {
+    width: 60%;
+    height: 48px;
+    padding: 12px 14px;
+    float: left;
+    border: 1px solid #DDE3E1;
+    border-radius: 8px;
+    color: #294A43;
+    font: inherit;
+}
+
+body#set .p-req {
+    margin: 18px 0;
+    padding: 16px 20px;
+    background-color: #F0F7F5;
+    border-radius: 8px;
+    color: #294A43;
+    font-size: 15px;
+}
+
+body#set .p-req strong {
+    color: #0F6E56;
+}
+
+body#set .p-req ul {
+    margin: 8px 0 0 24px;
+    padding-left: 16px;
+}
+
+body#set .p-req li {
+    margin-bottom: 4px;
+}
+
+body#set .set-actions {
+    margin-top: 18px;
+    overflow: hidden;
+    text-align: right;
+}
+
+body#set .set-actions button {
+    min-height: 48px;
+    margin-left: 8px;
+    padding: 10px 20px;
+    border: 1px solid #0F6E56;
+    border-radius: 7px;
+    font: inherit;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+body#set .set-reset {
+    background-color: white;
+    color: #0F6E56;
+}
+
+body#set .set-submit {
+    background-color: #0F6E56;
+    color: white;
 }

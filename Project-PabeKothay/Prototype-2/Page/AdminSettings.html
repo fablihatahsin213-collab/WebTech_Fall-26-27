@@ -7,54 +7,51 @@
         <link rel="stylesheet" href="../Design/style1.css">
         <script src="../Script/Settings.js" defer></script>
     </head>
-    <body class="admin-settings">
-        <div class="header">
+    <body id="set">
+        <div class="hdr">
             <img src="pabekothay logo 1.jpeg" id="logo" alt="PabeKothay logo">
             <h2>PabeKothay</h2>
-            <p class="tagline">Find what you need, share what you have</p>
-            <p class="portal-label">Admin Portal</p>
+            <p class="tag">Find what you need, share what you have</p>
+            <p class="port">Admin Portal</p>
         </div>
 
-        <div class="sidebar">
+        <div class="side">
             <a href="AdminDashboard.html">Dashboard</a>
             <a href="AdminManageUsers.html">Users</a>
             <a href="AdminManagePosts.html">Posts</a>
             <a href="AdminManageRequests.html">Requests</a>
             <a href="AdminSettings.html">Settings</a>
-            <a class="logout-link" href="AdminLogin.html">Log out</a>
+            <a class="out" href="AdminLogin.html">Log out</a>
         </div>
 
-        <main class="main settings-main">
+        <div class="box set-main">
             <h1>Settings</h1>
             <p>Update your account password</p>
 
-            <section class="password-card" aria-labelledby="password-settings-title">
-                <h2 id="password-settings-title">Password Settings</h2>
-                <form id="settings-form" class="settings-form" method="post" novalidate>
-                    <div class="password-field">
-                        <label for="current-password">Current Password <span>*</span></label>
-                        <input id="current-password" name="currentPassword" type="password"
+            <div class="p-card">
+                <h2 id="settingsTitle">Password Settings</h2>
+                <form id="settingsForm" class="set-form" method="post" novalidate>
+                    <div class="p-field">
+                        <label for="currPass">Current Password *</label>
+                        <input id="currPass" name="currentPassword" type="password"
                             placeholder="Enter current password" autocomplete="current-password" required>
-                        <span class="settings-error" id="current-password-error"></span>
                     </div>
 
-                    <div class="password-field">
-                        <label for="new-password">New Password <span>*</span></label>
-                        <input id="new-password" name="newPassword" type="password"
+                    <div class="p-field">
+                        <label for="newPass">New Password *</label>
+                        <input id="newPass" name="newPassword" type="password"
                             placeholder="Enter new password" autocomplete="new-password"
                             minlength="8" required>
-                        <span class="settings-error" id="new-password-error"></span>
                     </div>
 
-                    <div class="password-field">
-                        <label for="confirm-password">Confirm New Password <span>*</span></label>
-                        <input id="confirm-password" name="confirmPassword" type="password"
+                    <div class="p-field">
+                        <label for="confirmPass">Confirm New Password *</label>
+                        <input id="confirmPass" name="confirmPassword" type="password"
                             placeholder="Confirm new password" autocomplete="new-password"
                             minlength="8" required>
-                        <span class="settings-error" id="confirm-password-error"></span>
                     </div>
 
-                    <div class="password-requirements">
+                    <div class="p-req">
                         <strong>Password Requirements:</strong>
                         <ul>
                             <li>At least 8 characters long</li>
@@ -64,13 +61,13 @@
                         </ul>
                     </div>
 
-                    <div class="settings-actions">
-                        <button class="settings-reset" type="reset">Reset</button>
-                        <button class="settings-submit" type="submit">Update Password</button>
+                    <div class="set-actions">
+                        <button class="set-reset" type="reset">Reset</button>
+                        <button class="set-submit" type="submit">Update Password</button>
                     </div>
                 </form>
-            </section>
-        </main>
+            </div>
+        </div>
 
         <footer class="small-footer">© 2026 PabeKothay. All rights reserved.</footer>
     </body>

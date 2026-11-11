@@ -6,140 +6,79 @@
         <link rel="stylesheet" href="../Design/style1.css">
         <script src="../Script/Admin_reg.js" defer></script>
     </head>
-    <body class="admin-registration">
-        <header class="header">
+    <body id="reg">
+        <header class="hdr">
             <img src="pabekothay logo 1.jpeg" id="logo" alt="PabeKothay logo">
             <h2>PabeKothay </h2>
-            <p class="tagline">Find what you need, share what you have</p>
-            <p class="portal-label">Admin Portal</p>
+            <p class="tag">Find what you need, share what you have</p>
+            <p class="port">Admin Portal</p>
         </header>
 
-        <main class="registration-main">
-            <div class="registration-intro">
+        <div class="reg-main">
+            <div class="reg-intro">
                 <h1>Administrator Registration</h1>
                 <p>Create your administrator account. Admin approval is required before you can sign in.</p>
             </div>
 
-            <section class="registration-card" aria-labelledby="registration-form-title">
-                <h2 id="registration-form-title">Admin Access Request</h2>
-                <form id="admin-registration-form" method="post">
-                    <div class="registration-fields">
-                        <div class="registration-field field-left">
-                            <label for="full-name">Full name</label>
-                            <input id="full-name" name="fullName" type="text" autocomplete="name" required>
-                            <span class="registration-error" id="full-name-error"></span>
+            <div class="reg-card">
+                <h2 id="regTitle">Admin Access Request</h2>
+                <form id="regForm" method="post">
+                    <div class="reg-fields">
+                        <div class="reg-field lft">
+                            <label for="name">Full name</label>
+                            <input id="name" name="fullName" type="text" autocomplete="name" required>
                         </div>
 
-                        <div class="registration-field field-right">
-                            <label for="work-email">Official work email</label>
-                            <input id="work-email" name="email" type="email" autocomplete="email" required>
-                            <span class="registration-error" id="work-email-error"></span>
+                        <div class="reg-field rgt">
+                            <label for="email">Official work email</label>
+                            <input id="email" name="email" type="email" autocomplete="email" required>
                         </div>
 
-                        <div class="registration-field field-left">
-                            <label for="phone-number">Phone number</label>
-                            <input id="phone-number" name="phone" type="tel" autocomplete="tel" required>
-                            <span class="registration-error" id="phone-error"></span>
+                        <div class="reg-field lft">
+                            <label for="phone">Phone number</label>
+                            <input id="phone" name="phone" type="tel" autocomplete="tel" required>
                         </div>
 
-                        <div class="registration-field field-right">
-                            <label>Date of birth</label>
-                            <div class="registration-date-fields">
-                                <select id="dob-day" name="dateOfBirthDay" aria-label="Day of birth" required>
-                                    <option value="">Day</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                    <option value="13">13</option>
-                                    <option value="14">14</option>
-                                    <option value="15">15</option>
-                                    <option value="16">16</option>
-                                    <option value="17">17</option>
-                                    <option value="18">18</option>
-                                    <option value="19">19</option>
-                                    <option value="20">20</option>
-                                    <option value="21">21</option>
-                                    <option value="22">22</option>
-                                    <option value="23">23</option>
-                                    <option value="24">24</option>
-                                    <option value="25">25</option>
-                                    <option value="26">26</option>
-                                    <option value="27">27</option>
-                                    <option value="28">28</option>
-                                    <option value="29">29</option>
-                                    <option value="30">30</option>
-                                    <option value="31">31</option>
-                                </select>
-                                <select id="dob-month" name="dateOfBirthMonth" aria-label="Month of birth" required>
-                                    <option value="">Month</option>
-                                    <option value="1">January</option>
-                                    <option value="2">February</option>
-                                    <option value="3">March</option>
-                                    <option value="4">April</option>
-                                    <option value="5">May</option>
-                                    <option value="6">June</option>
-                                    <option value="7">July</option>
-                                    <option value="8">August</option>
-                                    <option value="9">September</option>
-                                    <option value="10">October</option>
-                                    <option value="11">November</option>
-                                    <option value="12">December</option>
-                                </select>
-                                <select id="dob-year" name="dateOfBirthYear" aria-label="Year of birth" required>
-                                    <option value="">Year</option>
-                                </select>
-                            </div>
-                            <span class="registration-error" id="date-of-birth-error"></span>
+                        <div class="reg-field rgt">
+                            <label for="dob">Date of birth</label>
+                            <input id="dob" name="dateOfBirth" type="date" min="1900-01-01" max="2026-12-31" required>
                         </div>
 
-                        <fieldset class="registration-field field-left registration-gender">
+                        <fieldset class="reg-field lft gender">
                             <legend>Gender</legend>
                             <label><input type="radio" name="gender" value="male" required> Male</label>
                             <label><input type="radio" name="gender" value="female" required> Female</label>
                             <label><input type="radio" name="gender" value="other" required> Other</label>
-                            <span class="registration-error" id="gender-error"></span>
                         </fieldset>
 
-                        <div class="registration-field field-right">
-                            <label for="department">Admin department</label>
-                            <select id="department" name="department" required>
+                        <div class="reg-field rgt">
+                            <label for="dept">Admin department</label>
+                            <select id="dept" name="department" required>
                                 <option value="" selected disabled>Select department</option>
                                 <option value="student-accounts">Student Accounts</option>
                                 <option value="marketplace">Marketplace</option>
                                 <option value="support">Customer Support</option>
                             </select>
-                            <span class="registration-error" id="department-error"></span>
                         </div>
 
-                        <div class="registration-field field-left">
-                            <label for="password">Create password</label>
-                            <input id="password" name="password" type="password" autocomplete="new-password" required>
-                            <span class="registration-error" id="password-error"></span>
+                        <div class="reg-field lft">
+                            <label for="pass">Create password</label>
+                            <input id="pass" name="password" type="password" autocomplete="new-password" required>
                         </div>
 
-                        <div class="registration-field field-right">
-                            <label for="confirm-password">Confirm password</label>
-                            <input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password" required>
-                            <span class="registration-error" id="confirm-password-error"></span>
+                        <div class="reg-field rgt">
+                            <label for="confirmPass">Confirm password</label>
+                            <input id="confirmPass" name="confirmPassword" type="password" autocomplete="new-password" required>
                         </div>
                     </div>
 
-                    <div class="registration-actions">
+                    <div class="act">
                         <button type="submit">Create Account</button>
                         <p>Already have an account? <a href="AdminLogin.html">Log in</a></p>
                     </div>
                 </form>
-            </section>
-        </main>
+            </div>
+        </div>
 
         <footer class="small-footer">© 2026 PabeKothay. All rights reserved.</footer>
     </body>

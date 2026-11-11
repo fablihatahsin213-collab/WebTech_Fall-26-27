@@ -6,42 +6,40 @@
         <link rel="stylesheet" href="../Design/style1.css">
         <script src="../Script/Admin_Login.js" defer></script>
     </head>
-    <body class="admin-login">
-        <header class="header">
+    <body id="log">
+        <header class="hdr">
             <img src="pabekothay logo 1.jpeg" id="logo" alt="PabeKothay logo">
             <h2>PabeKothay </h2>
-            <p class="tagline">Find what you need, share what you have</p>
-            <p class="portal-label">Admin Portal</p>
+            <p class="tag">Find what you need, share what you have</p>
+            <p class="port">Admin Portal</p>
         </header>
 
-        <main class="login-main">
-            <div class="login-intro">
+        <div class="log-main">
+            <div class="log-intro">
                 <h1>Admin Login</h1>
                 <p>Sign in with your work email to access your administrator account.</p>
             </div>
 
-            <section class="login-card" aria-labelledby="login-form-title">
-                <h2 id="login-form-title">Log in to your account</h2>
-                <form id="admin-login-form" method="post" novalidate>
-                    <div class="login-field">
-                        <label for="work-email">Official work email</label>
-                        <input id="work-email" name="email" type="email" autocomplete="email" required>
-                        <span class="login-error" id="login-email-error"></span>
+            <div class="log-card">
+                <h2 id="loginTitle">Log in to your account</h2>
+                <form id="loginForm" method="post">
+                    <div class="log-field">
+                        <label for="email">Official work email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required>
                     </div>
 
-                    <div class="login-field">
-                        <label for="password">Password</label>
-                        <input id="password" name="password" type="password" autocomplete="current-password" required>
-                        <span class="login-error" id="login-password-error"></span>
+                    <div class="log-field">
+                        <label for="pass">Password</label>
+                        <input id="pass" name="password" type="password" autocomplete="current-password" required>
                     </div>
 
-                    <div class="login-actions">
+                    <div class="log-actions">
                         <button type="submit">Log in</button>
                         <p>Need an account? <a href="AdminReg.html">Register</a></p>
                     </div>
                 </form>
-            </section>
-        </main>
+            </div>
+        </div>
 
         <footer class="small-footer">© 2026 PabeKothay. All rights reserved.</footer>
     </body>

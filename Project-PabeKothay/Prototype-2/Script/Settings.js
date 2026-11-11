@@ -7,8 +7,8 @@ function validateSettingsForm() {
 }
 
 function validateCurrentPassword() {
-    let password = document.getElementById("current-password").value;
-    let error = document.getElementById("current-password-error");
+    let password = document.getElementById("currPass").value;
+    let error = document.getElementById("currPassErr");
     if (password === "") {
         error.textContent = "Enter your current password.";
         console.log("Current password validation failed: password is empty.");
@@ -21,8 +21,8 @@ function validateCurrentPassword() {
 }
 
 function validateNewPassword() {
-    let password = document.getElementById("new-password").value;
-    let error = document.getElementById("new-password-error");
+    let password = document.getElementById("newPass").value;
+    let error = document.getElementById("newPassErr");
     if (password === "") {
         error.textContent = "Enter a new password.";
         console.log("New password validation failed: password is empty.");
@@ -59,9 +59,9 @@ function validateNewPassword() {
 }
 
 function validateConfirmPassword() {
-    let password = document.getElementById("new-password").value;
-    let confirmPassword = document.getElementById("confirm-password").value;
-    let error = document.getElementById("confirm-password-error");
+    let password = document.getElementById("newPass").value;
+    let confirmPassword = document.getElementById("confirmPass").value;
+    let error = document.getElementById("confirmPassErr");
     if (confirmPassword === "") {
         error.textContent = "Confirm your new password.";
         console.log("Password confirmation failed: confirmation is empty.");
@@ -79,4 +79,4 @@ function validateConfirmPassword() {
     return true;
 }
 
-document.getElementById("settings-form").onsubmit = validateSettingsForm;
+document.getElementById("settingsForm").onsubmit = validateSettingsForm;

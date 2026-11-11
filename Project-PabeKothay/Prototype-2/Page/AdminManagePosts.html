@@ -6,22 +6,22 @@
         <link rel="stylesheet" href="../Design/style1.css">
         <script src="../Script/AdminManagePosts.js" defer></script>
         </head>
-    <body class="admin-manage-posts">
-        <div class="header">
+    <body id="posts">
+        <div class="hdr">
             <image src="pabekothay logo 1.jpeg" id="logo"></image>
             <h2>PabeKothay </h2>
-            <p class="tagline">Find what you need, share what you have</p>
-            <p class="portal-label">Admin Portal</p>
+            <p class="tag">Find what you need, share what you have</p>
+            <p class="port">Admin Portal</p>
             </div>
-            <div class="sidebar">
+            <div class="side">
                 <a href="AdminDashboard.html">Dashboard</a>
                 <a href="AdminManageUsers.html">Users</a>
                 <a href="AdminManagePosts.html">Posts</a>
                 <a href="AdminManageRequests.html">Requests</a>
                 <a href="AdminSettings.html">Settings</a>
-                <a class="logout-link" href="AdminLogin.html">Log out</a>
+                <a class="out" href="AdminLogin.html">Log out</a>
             </div>
-            <div class="main">
+            <div class="box">
                 <h1>Manage Posts</h1>
                 <p>Review marketplace listings and availability</p>
                 <form>
@@ -34,34 +34,32 @@
                         <option value="Others">Others</option>
                         </select>
 
-                        <select id="post-filter-status" name="status">
+                        <select id="postFilterStatus" name="status">
                             <option value="">All statuses</option>
                             <option value="active">Active</option>
                             <option value="pending">Pending</option>
                             <option value="rejected">Rejected</option>
                         </select>
-                        <span class="request-error" id="post-filter-status-error"></span>
 
                         <input type="submit" value="Search">
                         </form>
-                        <section class="user-bulk-controls post-bulk-controls" aria-label="Bulk post actions">
-                            <label for="select-all-posts">Select All</label>
-                            <input id="select-all-posts" type="checkbox">
+                        <div class="bulk pbulk">
+                            <label for="selectAllPosts">Select All</label>
+                            <input id="selectAllPosts" type="checkbox">
 
-                            <label for="post-bulk-action">Bulk action</label>
-                            <select id="post-bulk-action" name="bulkAction">
+                            <label for="postBulkAction">Bulk action</label>
+                            <select id="postBulkAction" name="bulkAction">
                                 <option value="">Choose action</option>
                                 <option value="active">Active</option>
                                 <option value="pending">Pending</option>
                                 <option value="rejected">Rejected</option>
                             </select>
-                            <span class="request-error" id="post-bulk-action-error"></span>
-                            <button type="button" onclick="validate_data('post-filter-status', 'post-bulk-action', 'post-filter-status-error', 'post-bulk-action-error')">Apply</button>
-                            <button type="button" onclick="reset_data('post-filter-status', 'post-bulk-action', 'post-filter-status-error', 'post-bulk-action-error')">Reset</button>
-                        </section>
+                            <button type="button" onclick="validate_data('postFilterStatus', 'postBulkAction', 'postFilterStatusErr', 'postBulkActionErr')">Apply</button>
+                            <button type="button" onclick="reset_data('postFilterStatus', 'postBulkAction', 'postFilterStatusErr', 'postBulkActionErr')">Reset</button>
+                        </div>
 
-                        <div class="user-table-wrap">
-                            <table class="user-management-table post-management-table">
+                        <div class="wrap">
+                            <table class="utable ptable">
                                 <thead>
                                     <tr>
                                         <th>Post</th>
@@ -74,59 +72,56 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <input class="post-row-select" type="checkbox" aria-label="Select Engineering Book">
+                                            <input class="prow" type="checkbox">
                                             Engineering Book
                                         </td>
                                         <td>Mahim Khan</td>
                                         <td>Books</td>
                                         <td>
-                                            <select id="post-status-1" aria-label="Status for Engineering Book">
+                                            <select id="postStatus1">
                                                 <option value="active" selected>Active</option>
                                                 <option value="pending">Pending</option>
                                                 <option value="rejected">Rejected</option>
                                             </select>
-                                            <span class="request-error" id="post-status-error-1"></span>
                                         </td>
                                         <td>
-                                            <button class="update-user-button" type="button" onclick="validate_post_status('post-status-1', 'post-status-error-1')">Update</button>
+                                            <button class="upd" type="button" onclick="validate_post_status('postStatus1', 'postStatusErr1')">Update</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input class="post-row-select" type="checkbox" aria-label="Select Arduino Lab Kit">
+                                            <input class="prow" type="checkbox">
                                             Arduino Lab Kit
                                         </td>
                                         <td>Rikti Ahmed</td>
                                         <td>Lab kits</td>
                                         <td>
-                                            <select id="post-status-2" aria-label="Status for Arduino Lab Kit">
+                                            <select id="postStatus2">
                                                 <option value="active">Active</option>
                                                 <option value="pending" selected>Pending</option>
                                                 <option value="rejected">Rejected</option>
                                             </select>
-                                            <span class="request-error" id="post-status-error-2"></span>
                                         </td>
                                         <td>
-                                            <button class="update-user-button" type="button" onclick="validate_post_status('post-status-2', 'post-status-error-2')">Update</button>
+                                            <button class="upd" type="button" onclick="validate_post_status('postStatus2', 'postStatusErr2')">Update</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input class="post-row-select" type="checkbox" aria-label="Select Chemistry Lab Apron">
+                                            <input class="prow" type="checkbox">
                                             Chemistry Lab Apron
                                         </td>
                                         <td>Fabliha Tahsin</td>
                                         <td>Accessories</td>
                                         <td>
-                                            <select id="post-status-3" aria-label="Status for Chemistry Lab Apron">
+                                            <select id="postStatus3">
                                                 <option value="active">Active</option>
                                                 <option value="pending" selected>Pending</option>
                                                 <option value="rejected">Rejected</option>
                                             </select>
-                                            <span class="request-error" id="post-status-error-3"></span>
                                         </td>
                                         <td>
-                                            <button class="update-user-button" type="button" onclick="validate_post_status('post-status-3', 'post-status-error-3')">Update</button>
+                                            <button class="upd" type="button" onclick="validate_post_status('postStatus3', 'postStatusErr3')">Update</button>
                                         </td>
                                     </tr>
                                 </tbody>

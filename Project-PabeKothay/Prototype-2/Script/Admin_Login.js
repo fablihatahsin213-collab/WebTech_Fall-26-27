@@ -6,8 +6,8 @@ function collect_login_data() {
 }
 
 function validateEmail() {
-    let email = document.getElementById("work-email").value.trim();
-    let error = document.getElementById("login-email-error");
+    let email = document.getElementById("email").value.trim();
+    let error = document.getElementById("emailErr");
     let expression = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     console.log("Login email:", email);
 
@@ -29,8 +29,8 @@ function validateEmail() {
 }
 
 function validatePassword() {
-    let password = document.getElementById("password").value;
-    let error = document.getElementById("login-password-error");
+    let password = document.getElementById("pass").value;
+    let error = document.getElementById("passErr");
     console.log("Login password length:", password.length);
 
     if (password === "") {
@@ -50,4 +50,4 @@ function validatePassword() {
     return true;
 }
 
-document.getElementById("admin-login-form").onsubmit = collect_login_data;
+document.getElementById("loginForm").onsubmit = collect_login_data;

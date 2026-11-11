@@ -12,8 +12,8 @@ function collect_data() {
 }
 
 function validateName() {
-    let name = document.getElementById("full-name").value.trim();
-    let error = document.getElementById("full-name-error");
+    let name = document.getElementById("name").value.trim();
+    let error = document.getElementById("nameErr");
     console.log("Full name:", name);
 
     if (name === "") {
@@ -26,33 +26,23 @@ function validateName() {
 }
 
 function validateDateOfBirth() {
-    let day = document.getElementById("dob-day").value;
-    let month = document.getElementById("dob-month").value;
-    let year = document.getElementById("dob-year").value;
-    let error = document.getElementById("date-of-birth-error");
-    console.log("Date of birth:", year + "-" + month + "-" + day);
+    let dobValue = document.getElementById("dob").value;
+    let error = document.getElementById("dobErr");
+    console.log("Date of birth:", dobValue);
 
-    if (day === "" || month === "" || year === "") {
+    if (dobValue === "") {
         error.textContent = "Enter your date of birth.";
         return false;
     }
 
-    let dateOfBirth = new Date(Number(year), Number(month) - 1, Number(day));
-    if (dateOfBirth.getDate() !== Number(day) ||
-        dateOfBirth.getMonth() !== Number(month) - 1 ||
-        dateOfBirth.getFullYear() !== Number(year)) {
+    let dateOfBirth = new Date(dobValue + "T00:00:00");
+    if (Number.isNaN(dateOfBirth.getTime())) {
         error.textContent = "Enter a valid date of birth.";
         return false;
     }
 
     let today = new Date();
-    let todayString = [
-        today.getFullYear(),
-        String(today.getMonth() + 1).padStart(2, "0"),
-        String(today.getDate()).padStart(2, "0")
-    ].join("-");
-
-    if (dateOfBirth > todayString) {
+    if (dateOfBirth > today) {
         error.textContent = "Date of birth cannot be in the future.";
         return false;
     }
@@ -61,17 +51,9 @@ function validateDateOfBirth() {
     return true;
 }
 
-let yearSelect = document.getElementById("dob-year");
-for (let year = 2026; year >= 2010; year--) {
-    let option = document.createElement("option");
-    option.value = year;
-    option.textContent = year;
-    yearSelect.appendChild(option);
-}
-
 function validateGender() {
     let genders = document.querySelectorAll('input[name="gender"]');
-    let error = document.getElementById("gender-error");
+    let error = document.getElementById("genderErr");
     let selectedGender = "";
 
     for (let i = 0; i < genders.length; i++) {
@@ -92,8 +74,8 @@ function validateGender() {
 }
 
 function validateEmail() {
-    let email = document.getElementById("work-email").value.trim();
-    let error = document.getElementById("work-email-error");
+    let email = document.getElementById("email").value.trim();
+    let error = document.getElementById("emailErr");
     let expression = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     console.log("Email:", email);
 
@@ -112,8 +94,8 @@ function validateEmail() {
 }
 
 function validatePhone() {
-    let phone = document.getElementById("phone-number").value.trim();
-    let error = document.getElementById("phone-error");
+    let phone = document.getElementById("phone").value.trim();
+    let error = document.getElementById("phoneErr");
     let digits = phone.replace(/\D/g, "");
     console.log("Phone:", phone);
 
@@ -132,8 +114,8 @@ function validatePhone() {
 }
 
 function validateDepartment() {
-    let department = document.getElementById("department").value;
-    let error = document.getElementById("department-error");
+    let department = document.getElementById("dept").value;
+    let error = document.getElementById("deptErr");
     console.log("Department:", department);
 
     if (department === "") {
@@ -146,8 +128,8 @@ function validateDepartment() {
 }
 
 function validatePassword() {
-    let password = document.getElementById("password").value;
-    let error = document.getElementById("password-error");
+    let password = document.getElementById("pass").value;
+    let error = document.getElementById("passErr");
     console.log("Password validation started.");
 
     if (password === "") {
@@ -180,9 +162,9 @@ function validatePassword() {
 }
 
 function validateConfirmPassword() {
-    let password = document.getElementById("password").value;
-    let confirmPassword = document.getElementById("confirm-password").value;
-    let error = document.getElementById("confirm-password-error");
+    let password = document.getElementById("pass").value;
+    let confirmPassword = document.getElementById("confirmPass").value;
+    let error = document.getElementById("confirmPassErr");
     console.log("Password confirmation matches:", password === confirmPassword);
 
     if (confirmPassword === "") {
@@ -199,4 +181,4 @@ function validateConfirmPassword() {
     return true;
 }
 
-document.getElementById("admin-registration-form").onsubmit = collect_data;
+document.getElementById("regForm").onsubmit = collect_data;
